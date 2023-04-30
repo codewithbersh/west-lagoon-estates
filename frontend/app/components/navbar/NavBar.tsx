@@ -40,7 +40,7 @@ const NavBar = (props: Props) => {
           <Link className={navLinkClassName} href="/">
             blogs
           </Link>
-          <Button size="xsmall">Get in Touch</Button>
+          <Button>Get in Touch</Button>
         </div>
       </nav>
     </header>
