@@ -18,7 +18,7 @@ const NavBar = (props: Props) => {
     "capitalize font-medium tracking-wider text-gray-500";
   return (
     <header className="border-b-2 py-4">
-      <nav className="container mx-auto flex max-w-5xl items-center justify-between px-4 xl:px-0">
+      <nav className="container mx-auto flex max-w-5xl items-center justify-between px-4 lg:px-0">
         <Image src={logoMobile} alt="Logo Mobile" className="lg:hidden" />
         <Image
           src={logoDesktop}
