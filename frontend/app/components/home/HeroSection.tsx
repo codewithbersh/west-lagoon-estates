@@ -11,7 +11,7 @@ import Small from "../ui/Small";
 const HeroSection = () => {
   return (
     <div className=" container mx-auto max-w-5xl">
-      <div className="flex flex-col items-center px-4 py-8 sm:flex-row-reverse sm:gap-6 sm:py-24  lg:px-0 lg:py-40">
+      <div className="flex flex-col items-center px-4 py-8 sm:flex-row-reverse sm:gap-6 lg:px-0 lg:py-40">
         <div className=" max-w-[487px] flex-1">
           <Image alt="Beach Front Villa" src={beachFrontVilla} />
         </div>
