@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 
 import { IconCustomize, IconDiamond, IconShield } from "../ui/IconSVG";
+import Paragraph from "../ui/Paragraph";
+import Heading from "../ui/Heading";
 
 type Props = {};
 
@@ -44,12 +46,11 @@ const BenefitsSection = (props: Props) => {
                 {benefit.svg}
               </div>
               <div className=" flex flex-col gap-2">
-                <h3 className=" text-base font-medium lg:text-lg">
-                  {benefit.title}
-                </h3>
-                <p className=" text-gray-400 lg:text-lg">
+                <Heading size="sm">{benefit.title}</Heading>
+
+                <Paragraph className=" text-gray-400">
                   {benefit.description}
-                </p>
+                </Paragraph>
               </div>
             </div>
           );

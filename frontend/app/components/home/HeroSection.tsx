@@ -4,6 +4,9 @@ import Image from "next/image";
 import { Button } from "../ui/Button";
 
 import { BiRadioCircleMarked } from "react-icons/bi";
+import Heading from "../ui/Heading";
+import Paragraph from "../ui/Paragraph";
+import Small from "../ui/Small";
 
 const HeroSection = () => {
   return (
@@ -18,18 +21,18 @@ const HeroSection = () => {
 
           {/* heading and subheader */}
           <div className=" z-50 flex flex-col gap-2 text-center sm:text-left md:gap-4">
-            <h1 className="  text-[32px] leading-none md:text-4xl lg:text-6xl">
-              Find your dream <br /> home
+            <Heading size="xl">
+              Find your dream <br className="hidden sm:block" /> home
               <span className=" font-bold italic">
                 {" "}
                 <mark className=" inline-block bg-yellow-300 pb-[20px] leading-[0px] md:pb-[25px] lg:pb-[30px]">
                   today
                 </mark>
               </span>
-            </h1>
-            <p className=" text-sm leading-snug text-gray-500 md:text-lg lg:text-xl">
+            </Heading>
+            <Paragraph size="default" className="leading-snug text-gray-500">
               Discover a wide range of villas for rent at West Lagoon Estates.
-            </p>
+            </Paragraph>
           </div>
 
           {/* button */}
@@ -42,9 +45,9 @@ const HeroSection = () => {
             </Button>
             <div className=" flex shrink items-center gap-x-3">
               <BiRadioCircleMarked size={20} className=" text-yellow-300" />
-              <small className="text-xs leading-snug text-gray-500">
+              <Small className="text-gray-500">
                 At least 90% of our villas <br /> are rented each year!
-              </small>
+              </Small>
             </div>
           </div>
         </div>
