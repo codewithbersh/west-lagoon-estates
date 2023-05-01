@@ -1,5 +1,4 @@
 import React from "react";
-import beachFrontVilla from "@/public/beach-front-villa.jpeg";
 import Image from "next/image";
 import { Button } from "../ui/Button";
 
@@ -13,7 +12,7 @@ const HeroSection = () => {
     <div className=" container mx-auto max-w-5xl">
       <div className="flex flex-col items-center px-4 py-8 sm:flex-row-reverse sm:gap-6 lg:px-0 lg:py-40">
         <div className=" max-w-[487px] flex-1">
-          <Image alt="Beach Front Villa" src={beachFrontVilla} />
+          {/* <Image alt="Beach Front Villa" src={beachFrontVilla} /> */}
         </div>
         <div className=" relative flex flex-1 flex-col gap-6 px-8 sm:items-start sm:px-0 md:gap-12">
           {/* radial bg  */}

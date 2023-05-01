@@ -1,46 +1,50 @@
 import React from "react";
 import Image from "next/image";
-
-// images, icons
-
 import logoDesktop from "@/public/logo-desktop.svg";
 import logoMobile from "@/public/logo-mobile.svg";
+
 import Hamburger from "./Hamburger";
 import Link from "next/link";
 import { Button } from "../ui/Button";
 
 import { BiChevronDown } from "react-icons/bi";
 
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
+
 type Props = {};
 
 const NavBar = (props: Props) => {
-  const navLinkClassName =
-    "capitalize font-medium tracking-wider text-gray-500";
+  const navLinkClassName = `text-sm md:text-base text-gray-400 ${poppins.className} hover:text-emerald-600`;
   return (
-    <header className="border-b-2 py-4">
-      <nav className="container mx-auto flex max-w-5xl items-center justify-between px-4 lg:px-0">
-        <Image src={logoMobile} alt="Logo Mobile" className="lg:hidden" />
+    <header className="mx-auto max-w-5xl px-4 py-4 lg:px-0">
+      <nav className="flex justify-between">
+        <Image src={logoMobile} alt="Logo Mobile" className="sm:hidden" />
         <Image
           src={logoDesktop}
           alt="Logo Desktop"
-          className="hidden lg:block"
+          className="hidden sm:block"
         />
         <Hamburger />
 
-        <div className="hidden items-center justify-center gap-x-4  lg:flex">
+        <div className=" hidden items-center gap-6 sm:flex lg:gap-10">
+          <Link className={navLinkClassName} href="/">
+            Home
+          </Link>
           <Link
             className={`flex items-center gap-2 ${navLinkClassName}`}
             href="/"
           >
-            villas <BiChevronDown size={24} />
+            Villas <BiChevronDown size={24} />
           </Link>
           <Link className={navLinkClassName} href="/">
-            about
+            About
           </Link>
           <Link className={navLinkClassName} href="/">
-            blogs
+            Blogs
           </Link>
-          <Button>Get in Touch</Button>
+          <Button size="md">Contact Us</Button>
         </div>
       </nav>
     </header>
