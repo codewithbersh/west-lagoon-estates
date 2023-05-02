@@ -2,11 +2,10 @@ import { cn } from "@/app/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import React, { HTMLAttributes, forwardRef } from "react";
 
-const paragraphVariants = cva("max-w-prose text-gray-800", {
+const paragraphVariants = cva("max-w-prose text-gray-800 font-thin", {
   variants: {
     size: {
-      small: "text-sm lg:text-base",
-      default: "text-base lg:text-lg",
+      default: "text-base leading-normal",
     },
   },
   defaultVariants: {

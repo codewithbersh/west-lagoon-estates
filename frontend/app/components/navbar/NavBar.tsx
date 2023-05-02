@@ -16,7 +16,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 type Props = {};
 
 const NavBar = (props: Props) => {
-  const navLinkClassName = `text-sm md:text-base text-gray-400 ${poppins.className} hover:text-emerald-600`;
+  const navLinkClassName = `text-sm text-gray-400 ${poppins.className} hover:text-emerald-600`;
   return (
     <header className="mx-auto max-w-5xl px-4 py-4 lg:px-0">
       <nav className="flex justify-between">

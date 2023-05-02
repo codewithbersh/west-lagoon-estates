@@ -2,13 +2,13 @@ import { cn } from "@/app/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import React, { FC, HTMLAttributes } from "react";
 
-const headingVariants = cva("font-medium ", {
+const headingVariants = cva("font-normal ", {
   // leading none in cva not working
   variants: {
     size: {
       sm: "text-base lg:text-lg leading-none",
       default: "text-lg lg:text-xl leading-none",
-      md: "text-xl lg:text-2xl leading-none",
+      md: "text-xl leading-none",
       lg: "text-2xl lg:text-3xl leading-none",
       xl: "text-3xl lg:text-4xl leading-none",
     },

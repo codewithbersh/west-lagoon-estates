@@ -5,8 +5,7 @@ import React, { FC, HTMLAttributes } from "react";
 const smallVariants = cva("tracking-wide", {
   variants: {
     size: {
-      default: "text-xs lg:text-sm",
-      lg: "text-sm lg:text-base",
+      default: "text-sm",
     },
   },
   defaultVariants: {
