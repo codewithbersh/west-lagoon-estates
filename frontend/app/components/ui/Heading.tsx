@@ -6,11 +6,11 @@ const headingVariants = cva("font-normal ", {
   // leading none in cva not working
   variants: {
     size: {
-      sm: "text-base lg:text-lg leading-none",
-      default: "text-lg lg:text-xl leading-none",
+      sm: "text-base leading-none",
+      default: "text-lg leading-none",
       md: "text-xl leading-none",
-      lg: "text-2xl lg:text-3xl leading-none",
-      xl: "text-3xl lg:text-4xl leading-none",
+      lg: "text-2xl leading-none",
+      xl: "text-3xl leading-none",
     },
   },
   defaultVariants: {

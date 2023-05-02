@@ -53,48 +53,46 @@ const ameneties: AmenetyInterface[] = [
 
 const HeroSection = () => {
   return (
-    <div className="container relative mx-auto max-w-5xl overflow-clip pb-12 lg:flex lg:flex-row-reverse">
+    <div className="container relative mx-auto max-w-5xl overflow-clip md:pb-12 lg:flex lg:flex-row-reverse">
       <Image
         className="md:h-[450px] lg:h-[540px] lg:max-w-[850px] h-[380px] object-cover brightness-75 lg:rounded lg:object-fill"
         src={beachFront}
         alt="Beach Front Villa"
       />
 
-      {/* relative -translate-y-12 */}
-      <div className="">
-        <div className=" min-[510px]:max-w-[450px]  relative flex -translate-y-12 flex-col  gap-8 overflow-hidden border bg-white px-8 py-8 drop-shadow-lg min-[510px]:left-8 min-[510px]:rounded md:left-16 md:-translate-y-32 lg:absolute lg:bottom-24 lg:left-8 lg:translate-y-0">
-          <div className=" flex flex-col gap-6">
-            <Heading
-              size="md"
-              className="font-medium uppercase leading-tight text-emerald-900"
-            >
-              Your Gateway to Luxury
-            </Heading>
-            <Paragraph className="font-light text-gray-900">
-              Find the perfect villa for rent and experience luxurious living
-              like never before.
-            </Paragraph>
+      {/* relative -translate-y-12  md:-translate-y-32*/}
+      <div className=" min-[510px]:max-w-[450px]  relative flex -translate-y-12 flex-col  gap-8 overflow-hidden border bg-white px-8 py-8 drop-shadow-lg min-[510px]:left-8 min-[510px]:rounded md:left-16 md:-translate-y-32 lg:absolute lg:bottom-24 lg:left-8 lg:translate-y-0">
+        <div className=" flex flex-col gap-6">
+          <Heading
+            size="md"
+            className="font-medium uppercase leading-tight text-emerald-900"
+          >
+            Your Gateway to Luxury
+          </Heading>
+          <Paragraph className="font-light text-gray-900">
+            Find the perfect villa for rent and experience luxurious living like
+            never before.
+          </Paragraph>
 
-            <ul className="grid grid-cols-2 gap-4 font-light text-gray-500">
-              {ameneties.map((amenety, index) => {
-                return (
-                  <li key={index} className={`flex w-fit items-center gap-2`}>
-                    <span>{amenety.icon}</span>
-                    <Small className=" sm:text-sm">{amenety.title}</Small>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <ul className="grid grid-cols-2 gap-4 font-light text-gray-500">
+            {ameneties.map((amenety, index) => {
+              return (
+                <li key={index} className={`flex w-fit items-center gap-2`}>
+                  <span>{amenety.icon}</span>
+                  <Small className=" sm:text-sm">{amenety.title}</Small>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-          <div className=" flex gap-3">
-            <Button size="lg" variant="secondary">
-              Explore Villas
-            </Button>
-            <Button variant="tertiary" className="!px-0">
-              Learn more
-            </Button>
-          </div>
+        <div className=" flex gap-3">
+          <Button size="lg" variant="secondary">
+            Explore Villas
+          </Button>
+          <Button variant="tertiary" className="!px-0">
+            Learn more
+          </Button>
         </div>
       </div>
 
