@@ -10,6 +10,7 @@ import { Button } from "../ui/Button";
 import { BiChevronDown } from "react-icons/bi";
 
 import { Poppins } from "next/font/google";
+import { Logo } from "../ui/Logo";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
@@ -20,12 +21,7 @@ const NavBar = (props: Props) => {
   return (
     <header className="mx-auto max-w-5xl px-4 py-4 lg:px-0">
       <nav className="flex justify-between">
-        <Image src={logoMobile} alt="Logo Mobile" className="sm:hidden" />
-        <Image
-          src={logoDesktop}
-          alt="Logo Desktop"
-          className="hidden sm:block"
-        />
+        <Logo fill="#048757" />
         <Hamburger />
 
         <div className=" hidden items-center gap-6 sm:flex lg:gap-10">
