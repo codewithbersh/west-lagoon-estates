@@ -13,7 +13,7 @@ const buttonVariants = cva(
         tertiary: "bg-none underline text-gray-600 underline-offset-4",
       },
       size: {
-        default: "py-2 px-[14px] text-sm sm:py-[10px] sm:px-4",
+        default: "py-2 px-[14px] text-sm",
         md: "py-[10px] px-4 text-sm",
         lg: "py-[10px] px-[18px] text-base lg:py-[12px] lg:px-5",
         xl: "py-[12px] px-5 text-base",

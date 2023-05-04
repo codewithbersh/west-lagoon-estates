@@ -10,11 +10,16 @@ import Heading from "../ui/Heading";
 import Small from "../ui/Small";
 import Paragraph from "../ui/Paragraph";
 
+import { FaBed, FaBath, FaCarAlt, FaSign } from "react-icons/fa";
+import { IoBedSharp } from "react-icons/io5";
+import { BiArea, BiBath, BiBed } from "react-icons/bi";
+import { AiOutlineCar } from "react-icons/ai";
+
 type Props = {};
 
 interface villaType {
-  name: string;
   title: string;
+  caption: string;
   bedroom: number;
   bathroom: number;
   garage: number;
@@ -25,8 +30,9 @@ interface villaType {
 
 const villas: villaType[] = [
   {
-    name: "Zafira Mansion",
     title: "Beach Front Villa",
+    caption:
+      "Relax in luxury at this beach front villa with private beach and panoramic lagoon views.",
     bedroom: 6,
     bathroom: 5,
     garage: 2,
@@ -35,8 +41,9 @@ const villas: villaType[] = [
     image: beachFrontVilla,
   },
   {
-    name: "Jazira Estate",
     title: "Pool Front Villa",
+    caption:
+      "Experience resort-style living in this villa with direct pool access and stunning beach views.",
     bedroom: 5,
     bathroom: 4,
     garage: 2,
@@ -45,8 +52,9 @@ const villas: villaType[] = [
     image: poolFrontVilla,
   },
   {
-    name: "Hadiya Chateau",
     title: "Corver Villa",
+    caption:
+      "Escape to coastal luxury in this stunning 300m² single detached villa with beach and park views.",
     bedroom: 3,
     bathroom: 2,
     garage: 2,
@@ -56,76 +64,90 @@ const villas: villaType[] = [
   },
 ];
 
-const amenitiesClasses = "flex gap-2 items-center text-gray-700";
+const icon = {
+  size: 20,
+  style: { color: "#9ca3af" },
+};
 
-const fillColor = "fill-gray-400";
+const amenitiesClasses = " flex gap-2 items-center text-gray-600";
 
 const AvailableVillas = (props: Props) => {
   const format = require("comma-number");
   return (
-    <div className=" container mx-auto flex max-w-5xl flex-col gap-8 py-[120px]">
-      <div className=" flex flex-col gap-4 px-4 text-center md:text-left lg:px-0">
-        <Heading size="lg">Best Property Deals</Heading>
-        <div className=" flex flex-col justify-between md:flex-row">
-          <Paragraph className=" max-w-full text-gray-500">
+    <div className=" mx-auto max-w-5xl space-y-6 px-4 py-8 lg:px-0">
+      {/* Heading */}
+      <div className="flex flex-col gap-2">
+        <Heading size="xl">Best Property Deals</Heading>
+        <div className=" flex flex-col gap-6 sm:flex-row sm:justify-between">
+          <Paragraph className=" text-gray-500">
             We have the best deals for villas in West Bay
           </Paragraph>
-          <Link href="/" className=" font-medium text-blue-500 underline">
+          <Link
+            href="/"
+            className=" font-semibold text-emerald-600 underline underline-offset-2"
+          >
             View all
           </Link>
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-between gap-8">
+      {/* Card */}
+      <div className="grid auto-rows-max grid-cols-1 place-items-center gap-6 sm:grid-cols-2 sm:place-items-start min-[915px]:grid-cols-3">
         {villas.map((villa, index) => {
           return (
             <div
               key={index}
-              className="mx-auto flex max-w-[300px] flex-col gap-2 border px-4 py-4 sm:mx-0"
+              className=" h-full max-w-[400px] rounded border shadow transition duration-300 ease-in-out hover:scale-105  hover:cursor-pointer hover:shadow-xl"
             >
-              <Image
-                className=" h-[185px] object-cover object-center"
-                src={villa.image}
-                alt={villa.title}
-              />
-              <div className=" flex flex-col gap-6">
-                <div className=" flex flex-col gap-4">
-                  <div className=" flex flex-col gap-2">
-                    <Small className=" font-medium uppercase tracking-widest text-gray-400">
+              <div className="object-fill">
+                <Image
+                  className="h-[200px] rounded-t object-cover"
+                  src={villa.image}
+                  alt={villa.title}
+                />
+              </div>
+              <div className="flex flex-col justify-between gap-4 p-6">
+                <div className="">
+                  <div className="space-y-2">
+                    <Heading size="sm" className="font-medium">
                       {villa.title}
-                    </Small>
-                    <Heading>{villa.name}</Heading>
+                    </Heading>
+                    <Paragraph className="h-[96px] font-light text-gray-500">
+                      {villa.caption}
+                    </Paragraph>
                   </div>
 
-                  <div className=" flex justify-between">
+                  <div className="flex justify-between">
                     <div className={amenitiesClasses}>
-                      <IconBed fill={fillColor} />
-                      <Small size="lg">{villa.bedroom}</Small>
+                      <BiBed size={icon.size} style={icon.style} />
+                      <Small>{villa.bedroom}</Small>
                     </div>
 
                     <div className={amenitiesClasses}>
-                      <IconBath fill={fillColor} />
-                      <Small size="lg">{villa.bathroom}</Small>
+                      <BiBath size={icon.size} style={icon.style} />
+                      <Small>{villa.bathroom}</Small>
                     </div>
 
                     <div className={amenitiesClasses}>
-                      <IconCarGarage fill={fillColor} />
-                      <Small size="lg">{villa.garage}</Small>
+                      <AiOutlineCar size={icon.size} style={icon.style} />
+                      <Small>{villa.garage}</Small>
                     </div>
 
                     <div className={amenitiesClasses}>
-                      <IconArea fill={fillColor} />
-                      <Small size="lg">{villa.area}</Small>
+                      <BiArea size={icon.size} style={icon.style} />
+                      <Small>{villa.area} m²</Small>
                     </div>
                   </div>
                 </div>
 
                 <hr />
-                <div className=" flex items-center justify-between">
-                  <Heading size="md">
+                <div className="flex items-center justify-between">
+                  <Heading size="md" className=" font-bold">
                     QR <span>{format(villa.price)}</span>
                   </Heading>
-                  <Button>View Details</Button>
+                  <div className="flex items-center gap-1">
+                    <Button>View Details</Button>
+                  </div>
                 </div>
               </div>
             </div>
