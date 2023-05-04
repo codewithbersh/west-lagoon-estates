@@ -37,28 +37,26 @@ const benefits: Benefit[] = [
 
 const BenefitsSection = () => {
   return (
-    <div className="relative bg-gray-50  py-8 md:-translate-y-32 lg:-translate-y-0">
-      <div className="mx-auto flex max-w-5xl  flex-wrap items-center gap-8 overflow-hidden text-center md:px-4 lg:justify-between lg:px-0">
-        {benefits.map((benefit, index) => {
-          return (
-            <div
-              key={index}
-              className="mx-auto flex w-[300px] flex-col gap-4 rounded-lg border bg-white px-4 py-8 lg:mx-0"
-            >
-              <div className="mx-auto grid h-[45px] w-[45px] place-items-center rounded-full bg-emerald-100">
-                {benefit.svg}
-              </div>
-              <Heading size="sm" className=" text-gray-600">
-                {benefit.title}
-              </Heading>
-
-              <Paragraph className=" text-gray-500">
-                {benefit.description}
-              </Paragraph>
+    <div className="relative mx-auto flex max-w-5xl flex-wrap items-center gap-8  overflow-hidden py-4 text-center md:-translate-y-32 md:px-4 lg:-translate-y-0 lg:justify-between lg:px-0">
+      {benefits.map((benefit, index) => {
+        return (
+          <div
+            key={index}
+            className="mx-auto flex w-[300px] flex-col gap-4 rounded-lg border bg-white px-4 py-8 lg:mx-0"
+          >
+            <div className="mx-auto grid h-[45px] w-[45px] place-items-center rounded-full bg-emerald-100">
+              {benefit.svg}
             </div>
-          );
-        })}
-      </div>
+            <Heading size="sm" className=" text-gray-600">
+              {benefit.title}
+            </Heading>
+
+            <Paragraph className=" text-gray-500">
+              {benefit.description}
+            </Paragraph>
+          </div>
+        );
+      })}
     </div>
   );
 };
