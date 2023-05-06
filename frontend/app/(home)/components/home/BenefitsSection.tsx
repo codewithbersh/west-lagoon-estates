@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import Paragraph from "../ui/Paragraph";
-import Heading from "../ui/Heading";
+import Paragraph from "@/app/components/ui/Paragraph";
+import Heading from "@/app/components/ui/Heading";
 
 import { MdDashboardCustomize } from "react-icons/md";
 import { BsShieldFillCheck } from "react-icons/bs";

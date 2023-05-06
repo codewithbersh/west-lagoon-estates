@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Disclosure } from "@headlessui/react";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
+import Heading from "@/app/components/ui/Heading";
+import Paragraph from "@/app/components/ui/Paragraph";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 
 type QuestionType = {

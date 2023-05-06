@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 // ui components
-import { Button } from "../ui/Button";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
-import Small from "../ui/Small";
+import { Button } from "@/app/components/ui/Button";
+import Heading from "@/app/components/ui/Heading";
+import Paragraph from "@/app/components/ui/Paragraph";
+import Small from "@/app/components/ui/Small";
 
 // images and svgs
 import beachFront from "@/public/beach-front.jpg";

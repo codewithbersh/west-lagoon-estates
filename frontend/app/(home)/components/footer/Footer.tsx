@@ -1,10 +1,7 @@
 import React from "react";
-import logoDesktop from "@/public/logo-desktop.svg";
-import logoMobile from "@/public/logo-mobile.svg";
-import Image from "next/image";
 import Link from "next/link";
-import Small from "../ui/Small";
-import { Logo } from "../ui/Logo";
+import Small from "@/app/components/ui/Small";
+import { Logo } from "@/app/components/ui/Logo";
 
 type LinkType = {
   name: string;

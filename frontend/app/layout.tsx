@@ -1,6 +1,3 @@
-import Footer from "./components/footer/Footer";
-import NavBar from "./components/navbar/NavBar";
-import { NavProvider } from "./context/NavContext";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
@@ -21,13 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=" scroll-smooth">
-      <body className={roboto.className}>
-        <NavProvider>
-          <NavBar />
-          {children}
-          <Footer />
-        </NavProvider>
-      </body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

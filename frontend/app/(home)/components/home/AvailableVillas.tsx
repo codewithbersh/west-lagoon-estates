@@ -4,14 +4,9 @@ import beachFrontVilla from "@/public/beach-front.jpg";
 import poolFrontVilla from "@/public/pool-front.png";
 import cornerVilla from "@/public/corner-villa.jpg";
 import Image, { StaticImageData } from "next/image";
-import { IconBed, IconBath, IconCarGarage, IconArea } from "../ui/IconSVG";
-import { Button } from "../ui/Button";
-import Heading from "../ui/Heading";
-import Small from "../ui/Small";
-import Paragraph from "../ui/Paragraph";
-
-import { FaBed, FaBath, FaCarAlt, FaSign } from "react-icons/fa";
-import { IoBedSharp } from "react-icons/io5";
+import Heading from "@/app/components/ui/Heading";
+import Small from "@/app/components/ui/Small";
+import Paragraph from "@/app/components/ui/Paragraph";
 import { BiArea, BiBath, BiBed } from "react-icons/bi";
 import { AiOutlineCar } from "react-icons/ai";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";

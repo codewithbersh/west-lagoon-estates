@@ -1,7 +1,7 @@
 import React from "react";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
-import { Button } from "../ui/Button";
+import Heading from "@/app/components/ui/Heading";
+import Paragraph from "@/app/components/ui/Paragraph";
+import { Button } from "@/app/components/ui/Button";
 
 const CallToAction = () => {
   return (
