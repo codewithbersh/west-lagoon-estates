@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
+import Heading from "@/app/components/ui/Heading";
+import Paragraph from "@/app/components/ui/Paragraph";
 import Image, { StaticImageData } from "next/image";
 
 import amenities from "@/public/amenities.jpg";

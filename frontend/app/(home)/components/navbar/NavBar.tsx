@@ -4,12 +4,12 @@ import { Poppins } from "next/font/google";
 
 // ui components
 import Hamburger from "./Hamburger";
-import { Button } from "../ui/Button";
+import { Button } from "@/app/components/ui/Button";
 
 // svgs
 import { BiChevronDown } from "react-icons/bi";
-import { Logo } from "../ui/Logo";
-import ScrollLink from "../ui/ScrollLink";
+import { Logo } from "@/app/components/ui/Logo";
+import ScrollLink from "@/app/components/ui/ScrollLink";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 

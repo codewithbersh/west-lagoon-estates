@@ -2,23 +2,17 @@ import React from "react";
 import Image from "next/image";
 
 // ui components
-import { Button } from "../ui/Button";
-import Heading from "../ui/Heading";
-import Paragraph from "../ui/Paragraph";
-import Small from "../ui/Small";
+import { Button } from "@/app/components/ui/Button";
+import Heading from "@/app/components/ui/Heading";
+import Paragraph from "@/app/components/ui/Paragraph";
+import Small from "@/app/components/ui/Small";
 
 // images and svgs
 import beachFront from "@/public/beach-front.jpg";
 import { TbToolsKitchen2 } from "react-icons/tb";
 import { BiCloset } from "react-icons/bi";
 import { GiHomeGarage } from "react-icons/gi";
-import {
-  MdOutlinePool,
-  MdOutlineSevereCold,
-  MdWifi,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
-import Link from "next/link";
+import { MdOutlinePool, MdOutlineSevereCold, MdWifi } from "react-icons/md";
 
 interface AmenetyInterface {
   icon: JSX.Element;

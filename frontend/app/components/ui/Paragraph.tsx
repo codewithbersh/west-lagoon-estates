@@ -1,6 +1,6 @@
+import React, { HTMLAttributes, forwardRef } from "react";
 import { cn } from "@/app/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
-import React, { HTMLAttributes, forwardRef } from "react";
 
 const paragraphVariants = cva("max-w-prose text-gray-800", {
   variants: {

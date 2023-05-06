@@ -1,8 +1,7 @@
 "use client";
 
-import { NavContext } from "@/app/context/NavContext";
 import React, { useContext } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { NavContext } from "@/app/(home)/context/NavContext";
 
 type Props = {};
 

@@ -1,15 +1,15 @@
 import React from "react";
 import HeroSection from "./components/home/HeroSection";
-import BenefitsSection from "./components/home/BenefitsSection";
 import AvailableVillas from "./components/home/AvailableVillas";
-import Features from "./components/home/Features";
 import CallToAction from "./components/home/CallToAction";
 import FrequentlyAskedQuestions from "./components/home/FrequentlyAskedQuestions";
 import Location from "./components/home/Location";
 
-type Props = {};
+// removed
+import BenefitsSection from "./components/home/BenefitsSection";
+import Features from "./components/home/Features";
 
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <main>
       <HeroSection />

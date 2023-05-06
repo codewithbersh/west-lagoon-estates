@@ -1,6 +1,6 @@
+import React, { FC, HTMLAttributes } from "react";
 import { cn } from "@/app/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
-import React, { FC, HTMLAttributes } from "react";
 
 const smallVariants = cva("tracking-wide", {
   variants: {
