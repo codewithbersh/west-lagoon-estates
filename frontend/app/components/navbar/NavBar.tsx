@@ -1,45 +1,42 @@
 import React from "react";
-import Image from "next/image";
-import logoDesktop from "@/public/logo-desktop.svg";
-import logoMobile from "@/public/logo-mobile.svg";
-
-import Hamburger from "./Hamburger";
 import Link from "next/link";
+import { Poppins } from "next/font/google";
+
+// ui components
+import Hamburger from "./Hamburger";
 import { Button } from "../ui/Button";
 
+// svgs
 import { BiChevronDown } from "react-icons/bi";
-
-import { Poppins } from "next/font/google";
 import { Logo } from "../ui/Logo";
+import ScrollLink from "../ui/ScrollLink";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
-type Props = {};
-
-const NavBar = (props: Props) => {
+const NavBar = () => {
   const navLinkClassName = `text-sm text-gray-400 ${poppins.className} hover:text-emerald-600`;
   return (
     <header className="mx-auto max-w-5xl px-4 py-4 lg:px-0">
-      <nav className="flex justify-between">
+      <nav className="flex items-center justify-between">
         <Logo fill="#048757" />
         <Hamburger />
 
         <div className=" hidden items-center gap-6 sm:flex lg:gap-10">
-          <Link className={navLinkClassName} href="/">
+          <ScrollLink className={navLinkClassName} href="/#" scroll>
             Home
-          </Link>
+          </ScrollLink>
           <Link
             className={`flex items-center gap-2 ${navLinkClassName}`}
             href="/"
           >
             Villas <BiChevronDown size={24} />
           </Link>
-          <Link className={navLinkClassName} href="/">
-            About
-          </Link>
-          <Link className={navLinkClassName} href="/">
-            Blogs
-          </Link>
+          <ScrollLink className={navLinkClassName} href="/#location" scroll>
+            Location
+          </ScrollLink>
+          <ScrollLink className={navLinkClassName} href="/#FAQs" scroll>
+            FAQs
+          </ScrollLink>
           <Button size="md">Contact Us</Button>
         </div>
       </nav>

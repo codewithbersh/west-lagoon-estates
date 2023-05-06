@@ -51,7 +51,7 @@ const questions: QuestionType[] = [
 
 const FrequentlyAskedQuestions = () => {
   return (
-    <div className=" mx-auto max-w-5xl space-y-10 px-4 pb-24 pt-8">
+    <div id="FAQs" className=" mx-auto max-w-5xl space-y-10 px-4 pb-24 pt-8">
       <div className=" space-y-2 text-center">
         <Heading size="xl">Frequently Asked Questions</Heading>
         <Paragraph className=" mx-auto text-gray-500">

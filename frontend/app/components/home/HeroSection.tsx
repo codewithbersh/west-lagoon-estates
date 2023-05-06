@@ -1,18 +1,24 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "../ui/Button";
 
+// ui components
+import { Button } from "../ui/Button";
 import Heading from "../ui/Heading";
 import Paragraph from "../ui/Paragraph";
 import Small from "../ui/Small";
 
+// images and svgs
 import beachFront from "@/public/beach-front.jpg";
-import wle from "@/public/wle.jpg";
-
 import { TbToolsKitchen2 } from "react-icons/tb";
 import { BiCloset } from "react-icons/bi";
 import { GiHomeGarage } from "react-icons/gi";
-import { MdOutlinePool, MdOutlineSevereCold, MdWifi } from "react-icons/md";
+import {
+  MdOutlinePool,
+  MdOutlineSevereCold,
+  MdWifi,
+  MdKeyboardArrowRight,
+} from "react-icons/md";
+import Link from "next/link";
 
 interface AmenetyInterface {
   icon: JSX.Element;
@@ -53,26 +59,30 @@ const ameneties: AmenetyInterface[] = [
 
 const HeroSection = () => {
   return (
-    <div className="container relative mx-auto max-w-5xl overflow-clip md:pb-12 lg:flex lg:flex-row-reverse">
+    <div className="container relative mx-auto max-w-5xl overflow-clip lg:flex lg:flex-row-reverse">
       <Image
-        className="md:h-[450px] lg:h-[540px] lg:max-w-[850px] h-[380px] object-cover brightness-75 lg:rounded lg:object-fill"
+        className="h-[380px] object-cover brightness-75 md:h-[450px] lg:h-[540px] lg:max-w-[850px] lg:rounded lg:object-fill"
         src={beachFront}
         alt="Beach Front Villa"
       />
 
-      {/* relative -translate-y-12  md:-translate-y-32*/}
-      <div className=" min-[510px]:max-w-[450px]  relative flex -translate-y-12 flex-col  gap-8 overflow-hidden border bg-white px-8 py-8 drop-shadow-lg min-[510px]:left-8 min-[510px]:rounded md:left-16 md:-translate-y-32 lg:absolute lg:bottom-24 lg:left-8 lg:translate-y-0">
-        <div className=" flex flex-col gap-6">
-          <Heading
-            size="md"
-            className="font-medium uppercase leading-tight text-emerald-900"
-          >
-            Your Gateway to Luxury
-          </Heading>
-          <Paragraph className="font-light text-gray-900">
-            Find the perfect villa for rent and experience luxurious living like
-            never before.
-          </Paragraph>
+      {/* card */}
+      <div className=" relative  -top-12 -mb-12 space-y-8 overflow-hidden border bg-white px-8 py-8 drop-shadow-lg min-[510px]:left-8 min-[510px]:max-w-[450px] min-[510px]:rounded md:-top-24 md:-mb-24 lg:absolute lg:left-8 lg:top-16 lg:mb-0">
+        <div className=" space-y-8">
+          <div className=" space-y-4">
+            <div>
+              <Small className="font-normal uppercase text-gray-500">
+                West Bay Lagoon
+              </Small>
+              <Heading size="lg" className="leading-tight text-emerald-700">
+                Luxury Villas for Rent
+              </Heading>
+            </div>
+            <Paragraph className="font-light text-gray-900">
+              Find the perfect villa for rent in Doha, Qatar and experience
+              luxurious living like never before.
+            </Paragraph>
+          </div>
 
           <ul className="grid grid-cols-2 gap-4 font-light text-gray-500">
             {ameneties.map((amenety, index) => {
@@ -86,11 +96,16 @@ const HeroSection = () => {
           </ul>
         </div>
 
-        <div className=" flex gap-3">
+        <div className="flex space-x-3">
           <Button size="lg" variant="secondary">
             Explore Villas
           </Button>
-          <Button variant="tertiary" className="!px-0">
+
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-gray-700 text-gray-700"
+          >
             Learn more
           </Button>
         </div>

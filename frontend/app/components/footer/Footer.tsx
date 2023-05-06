@@ -40,23 +40,20 @@ const links: LinkType[] = [
 
 const Footer = () => {
   return (
-    <div className="bg-emerald-700">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8  px-4 py-8 min-[850px]:flex-row min-[850px]:justify-between lg:px-0">
-        <Logo fill="#ffffff" />
-        <div className="flex flex-wrap gap-y-4 min-[850px]:flex-row min-[850px]:gap-x-4">
+    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 py-8">
+      <hr className=" w-full" />
+      <div className="flex flex-col gap-4 space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
+        <Logo fill="#059669" />
+        <div className="grid grid-cols-2  gap-4 md:grid-cols-6">
           {links.map((link, index) => {
             return (
-              <Link
-                className=" w-1/2 font-medium text-emerald-100 min-[850px]:w-fit"
-                key={index}
-                href={link.href}
-              >
+              <Link className="" key={index} href={link.href}>
                 {link.name}
               </Link>
             );
           })}
         </div>
-        <Small className=" text-emerald-200">© 2077 West Lagoon Estates</Small>
+        <Small className=" ">© 2023 West Lagoon Estates</Small>
       </div>
     </div>
   );

@@ -14,6 +14,8 @@ import { FaBed, FaBath, FaCarAlt, FaSign } from "react-icons/fa";
 import { IoBedSharp } from "react-icons/io5";
 import { BiArea, BiBath, BiBed } from "react-icons/bi";
 import { AiOutlineCar } from "react-icons/ai";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { BsArrowDownCircle } from "react-icons/bs";
 
 type Props = {};
 
@@ -52,7 +54,7 @@ const villas: villaType[] = [
     image: poolFrontVilla,
   },
   {
-    title: "Corver Villa",
+    title: "Corner Villa",
     caption:
       "Escape to coastal luxury in this stunning 300m² single detached villa with beach and park views.",
     bedroom: 3,
@@ -82,12 +84,15 @@ const AvailableVillas = (props: Props) => {
           <Paragraph className=" text-gray-500">
             We have the best deals for villas in West Bay
           </Paragraph>
-          <Link
-            href="/"
-            className=" font-semibold text-emerald-600 underline underline-offset-2"
-          >
-            View all
-          </Link>
+          <div className=" flex items-center gap-1">
+            <BsArrowDownCircle className=" text-gray-600" />
+            <Link
+              href="/"
+              className=" font-medium text-gray-600 underline underline-offset-2"
+            >
+              Download Brochure
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -142,11 +147,23 @@ const AvailableVillas = (props: Props) => {
 
                 <hr />
                 <div className="flex items-center justify-between">
-                  <Heading size="md" className=" font-bold">
-                    QR <span>{format(villa.price)}</span>
-                  </Heading>
+                  <div className=" flex items-start gap-[6px]">
+                    <span className=" text-sm leading-tight">QAR</span>
+                    <Heading size="lg" className=" font-bold tracking-wide">
+                      {format(villa.price)}
+                    </Heading>
+                  </div>
                   <div className="flex items-center gap-1">
-                    <Button>View Details</Button>
+                    <Link
+                      href="/"
+                      className=" text-sm font-medium tracking-wide text-emerald-600"
+                    >
+                      View Villa
+                    </Link>
+                    <MdOutlineKeyboardArrowRight
+                      size={24}
+                      className=" text-emerald-600"
+                    />
                   </div>
                 </div>
               </div>

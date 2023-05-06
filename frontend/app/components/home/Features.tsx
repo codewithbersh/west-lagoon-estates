@@ -80,7 +80,7 @@ const Features = () => {
       <div className=" space-y-8">
         {features.map((feature, index) => {
           const reverseRow = index % 2 !== 0;
-          const containerClass = `flex flex-col md:items-center gap-4 space-y-6 md:justify-between min-[450px]:items-center  ${
+          const containerClass = `flex flex-col md:items-center gap-4 space-y-6 md:justify-between items-center  ${
             reverseRow ? "md:flex-row-reverse" : "md:flex-row"
           }`;
           return (
