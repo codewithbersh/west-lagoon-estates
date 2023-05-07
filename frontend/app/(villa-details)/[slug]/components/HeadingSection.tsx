@@ -69,6 +69,7 @@ const HeadingSection = ({ villa }: Props) => {
           {photos.slice(0, 5).map((photo, index) => {
             return (
               <Image
+                key={index}
                 className={`${
                   index === 0 ? "col-span-6 row-span-2" : "col-span-3"
                 } h-full object-cover`}
