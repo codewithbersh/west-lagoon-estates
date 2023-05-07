@@ -1,13 +1,13 @@
 import React from "react";
+import HeadingSection from "./components/HeadingSection";
+import { villa } from "@/contents/villa/villa-contents";
 
-type VillaDetailsType = {
-  params: {
-    slug: string;
-  };
+const VillaDetail = () => {
+  return (
+    <div>
+      <HeadingSection villa={villa} />
+    </div>
+  );
 };
 
-const VillaDetails = ({ params }: VillaDetailsType) => {
-  return <div>{params.slug}</div>;
-};
-
-export default VillaDetails;
+export default VillaDetail;
