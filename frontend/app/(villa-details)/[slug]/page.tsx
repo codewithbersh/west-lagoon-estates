@@ -4,6 +4,7 @@ import { villa } from "@/contents/villa/villa-contents";
 import OfferSection from "./components/OfferSection";
 import ContactSection from "./components/ContactSection";
 import AmenetiesSection from "./components/AmenetiesSection";
+import LocationSection from "./components/LocationSection";
 
 const VillaDetail = () => {
   return (
@@ -20,6 +21,10 @@ const VillaDetail = () => {
         {/* Desktop only Contact Card */}
         <ContactSection />
       </div>
+
+      <hr className="mx-auto max-w-5xl px-4 lg:px-0" />
+
+      <LocationSection />
 
       <hr className="mx-auto max-w-5xl px-4 lg:px-0" />
     </div>

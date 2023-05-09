@@ -49,7 +49,7 @@ const ContactSection = () => {
     <form
       onSubmit={handleSubmit(onSubmit)}
       autoComplete="off"
-      className=" contact-form hidden h-fit max-w-[350px] flex-col gap-4 rounded border px-6 py-6 md:flex"
+      className=" contact-form hidden h-fit max-w-[350px] flex-col gap-4 rounded border px-6 py-6 shadow-xl md:flex"
     >
       <div className=" flex gap-2">
         <Input
