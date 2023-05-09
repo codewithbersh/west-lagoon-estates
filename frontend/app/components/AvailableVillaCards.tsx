@@ -24,7 +24,7 @@ const AvailableVillaCards = ({ villas }: Props) => {
   const format = require("comma-number");
 
   return (
-    <div className="grid auto-rows-max grid-cols-1 place-items-center gap-6 sm:grid-cols-2 sm:place-items-start min-[915px]:grid-cols-3">
+    <div className="grid auto-rows-max grid-cols-1 place-items-start gap-6 sm:grid-cols-2 sm:place-items-start min-[915px]:grid-cols-3">
       {villas
         .filter((villa) => villa.available === true)
         .map((villa, index) => {
