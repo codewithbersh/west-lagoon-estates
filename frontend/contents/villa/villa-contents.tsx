@@ -5,185 +5,62 @@ import boat from "@/public/beach-front/boat.jpg";
 import kitchen from "@/public/beach-front/kitchen.jpg";
 import livingArea from "@/public/beach-front/living-area.jpg";
 import masters from "@/public/beach-front/masters.jpg";
-import { BiBed } from "react-icons/bi";
-import { IconType } from "react-icons";
+import { ameneties } from "./ameneties";
+import { VillaType } from "@/types/villa";
 
-const amenetyBedroom = [
-  {
-    icon: <BiBed />,
-    description: "Built-in closets",
-  },
-  {
-    icon: <BiBed />,
-    description: "Two balconies",
-  },
-  {
-    icon: <BiBed />,
-    description: "Private bathroom",
-  },
-];
-
-const amenetyBathroom = [
-  {
-    icon: <BiBed />,
-    description: "Bath tub",
-  },
-  {
-    icon: <BiBed />,
-    description: "Shower",
-  },
-  {
-    icon: <BiBed />,
-    description: "Vanity sinks",
-  },
-];
-
-const amenetyKitchen = [
-  {
-    icon: <BiBed />,
-    description: "Refridgerator",
-  },
-  {
-    icon: <BiBed />,
-    description: "Built-in stove",
-  },
-  {
-    icon: <BiBed />,
-    description: "Microwave",
-  },
-  {
-    icon: <BiBed />,
-    description: "Exhaust",
-  },
-];
-
-const amenetyLocationFeatures = [
-  {
-    icon: <BiBed />,
-    description: "Kids playground",
-  },
-  {
-    icon: <BiBed />,
-    description: "Shared swimming pool",
-  },
-  {
-    icon: <BiBed />,
-    description: "Maintained parks",
-  },
-  {
-    icon: <BiBed />,
-    description: "Tennis courts",
-  },
-  {
-    icon: <BiBed />,
-    description: "Basketball courts",
-  },
-];
-
-const amenetyHeatingCooling = [
-  {
-    icon: <BiBed />,
-    description: "Centralized A/C",
-  },
-  {
-    icon: <BiBed />,
-    description: "Hot and cold water",
-  },
-];
-
-const amenetyOutdoor = [
-  {
-    icon: <BiBed />,
-    description: "Two shaded parking",
-  },
-  {
-    icon: <BiBed />,
-    description: "Private garden",
-  },
-  {
-    icon: <BiBed />,
-    description: "Private balconies",
-  },
-];
-
-const amenetySecurityServices = [
-  {
-    icon: <BiBed />,
-    description: "24-hour security",
-  },
-  {
-    icon: <BiBed />,
-    description: "Surveillance systems",
-  },
-  {
-    icon: <BiBed />,
-    description: "Maintenance services",
-  },
-];
-
-export const villa = {
+const beachFrontVilla: VillaType = {
+  slug: "beach-front-villa",
   title: "Beach Front Villa with 6 BR",
+  cardTitle: "Beach Front Villa",
+  cardCaption:
+    "Relax in luxury at this beach front villa with private beach and panoramic lagoon views.",
+  bedroom: 6,
+  bathroom: 5,
+  garage: 2,
+  area: 500,
+  locationFeature: "Private Beach",
+  price: 30000,
   photos: [beachFront, backyard, boat, kitchen, livingArea, masters],
-  offers: [
-    {
-      icon: <BiBed />,
-      description: "6 Bedrooms",
-    },
-    {
-      icon: <BiBed />,
-      description: "5 Bathrooms",
-    },
-    {
-      icon: <BiBed />,
-      description: "500m² Property",
-    },
-    {
-      icon: <BiBed />,
-      description: "Private Beach",
-    },
-  ],
-  ameneties: [
-    {
-      title: "Bedroom",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetyBedroom,
-    },
-    {
-      title: "Bathroom",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetyBathroom,
-    },
-    {
-      title: "Kitchen",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetyKitchen,
-    },
-    {
-      title: "Location Features",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetyLocationFeatures,
-    },
-    {
-      title: "Heating & Cooling",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetyHeatingCooling,
-    },
-    {
-      title: "Outdoor",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetyOutdoor,
-    },
-    {
-      title: "Security & Services",
-      description:
-        "Lorem ipsum dolor sit amet consetur lorem ipsum dolor sit ament.",
-      list: amenetySecurityServices,
-    },
-  ],
+  ameneties: ameneties,
+  available: true,
 };
+
+const poolFrontVilla: VillaType = {
+  slug: "pool-front-villa",
+  title: "Pool Front Villa with 6 BR",
+  cardTitle: "Beach Front Villa",
+  cardCaption:
+    "Experience resort-style living in this villa with direct pool access and stunning beach views.",
+  bedroom: 5,
+  bathroom: 4,
+  garage: 2,
+  area: 470,
+  locationFeature: "Direct pool access",
+  price: 25000,
+  photos: [beachFront, backyard, boat, kitchen, livingArea, masters],
+  ameneties: ameneties,
+  available: true,
+};
+
+const cornerVilla: VillaType = {
+  slug: "corner-villa",
+  title: "Beach Front Villa with 6 BR",
+  cardTitle: "Corner Villa",
+  cardCaption:
+    "Escape to coastal luxury in this stunning 300m² single detached villa with beach and park views.",
+  bedroom: 3,
+  bathroom: 2,
+  garage: 2,
+  area: 300,
+  locationFeature: "I dont know",
+  price: 18000,
+  photos: [beachFront, backyard, boat, kitchen, livingArea, masters],
+  ameneties: ameneties,
+  available: true,
+};
+
+export const villas: VillaType[] = [
+  beachFrontVilla,
+  poolFrontVilla,
+  cornerVilla,
+];

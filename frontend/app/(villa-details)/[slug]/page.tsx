@@ -1,12 +1,23 @@
 import React from "react";
 import HeadingSection from "./components/HeadingSection";
-import { villa } from "@/contents/villa/villa-contents";
 import OfferSection from "./components/OfferSection";
 import ContactSection from "./components/ContactSection";
 import AmenetiesSection from "./components/AmenetiesSection";
 import LocationSection from "./components/LocationSection";
+import { villas } from "@/contents/villa/villa-contents";
+import OtherVillas from "./components/OtherVillas";
 
-const VillaDetail = () => {
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+const VillaDetail = ({ params }: Props) => {
+  const villa = villas.find((villa) => villa.slug === params.slug);
+
+  if (!villa) throw new Error("Page not found");
+
   return (
     <div>
       <HeadingSection villa={villa} />
@@ -27,6 +38,8 @@ const VillaDetail = () => {
       <LocationSection />
 
       <hr className="mx-auto max-w-5xl px-4 lg:px-0" />
+
+      <OtherVillas villas={villas.filter((item) => item.slug !== villa.slug)} />
     </div>
   );
 };

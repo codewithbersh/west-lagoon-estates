@@ -4,13 +4,14 @@ import AvailableVillas from "./components/home/AvailableVillas";
 import Location from "./components/home/Location";
 import CallToAction from "./components/home/CallToAction";
 import FrequentlyAskedQuestions from "./components/home/FrequentlyAskedQuestions";
+import { villas } from "@/contents/villa/villa-contents";
 
 const Home = () => {
   return (
     <main>
       <HeroSection />
       {/* <BenefitsSection /> */}
-      <AvailableVillas />
+      <AvailableVillas villas={villas} />
       <Location />
       {/* <Features /> */}
       <CallToAction />
