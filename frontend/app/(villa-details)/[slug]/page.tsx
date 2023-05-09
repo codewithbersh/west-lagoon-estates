@@ -6,6 +6,7 @@ import AmenetiesSection from "./components/AmenetiesSection";
 import LocationSection from "./components/LocationSection";
 import { villas } from "@/contents/villa/villa-contents";
 import OtherVillas from "./components/OtherVillas";
+import CallToAction from "@/app/(home)/components/home/CallToAction";
 
 type Props = {
   params: {
@@ -40,6 +41,8 @@ const VillaDetail = ({ params }: Props) => {
       <hr className="mx-auto max-w-5xl px-4 lg:px-0" />
 
       <OtherVillas villas={villas.filter((item) => item.slug !== villa.slug)} />
+
+      <CallToAction />
     </div>
   );
 };
