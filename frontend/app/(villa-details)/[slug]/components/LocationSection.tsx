@@ -11,7 +11,7 @@ type Props = {};
 const LocationSection = (props: Props) => {
   const { title, description, benefits } = idealLocation;
   return (
-    <div className="mx-auto max-w-5xl space-y-4 px-4 py-8">
+    <div className="mx-auto max-w-5xl space-y-4 px-4 py-8 lg:px-0">
       <div>
         <Heading className=" text-[22px]">Where you'll be</Heading>
         <Small className=" flex items-center gap-1">
