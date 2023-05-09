@@ -6,7 +6,10 @@
   body {
     @apply text-gray-800;
   }
-  .i4ewOd-pzNkMb-haAclf {
-    display: none;
+  .contact-form input {
+    @apply outline-none;
+  }
+  .contact-form input::placeholder {
+    @apply text-gray-400;
   }
 }

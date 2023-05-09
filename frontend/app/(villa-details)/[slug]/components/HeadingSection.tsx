@@ -20,7 +20,7 @@ type Props = {
 const HeadingSection = ({ villa }: Props) => {
   const { photos } = villa;
   return (
-    <div className="mx-auto max-w-5xl md:px-4 md:py-8 lg:px-0">
+    <div className="mx-auto max-w-5xl md:px-4 md:pt-8 lg:px-0">
       {/* Heading Mobile */}
       <div className="md:hidden">
         {/* Photo */}
