@@ -1,3 +1,4 @@
+import Footer from "./components/footer/Footer";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=" scroll-smooth">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,5 +1,4 @@
 import { NavProvider } from "../context/NavContext";
-import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
 
 export default function HomeLayout({
@@ -13,8 +12,6 @@ export default function HomeLayout({
       <NavProvider>
         <NavBar />
         {children}
-
-        <Footer />
       </NavProvider>
     </section>
   );
