@@ -7,7 +7,7 @@
     @apply text-gray-800;
   }
   .contact-form input {
-    @apply outline-none;
+    @apply !placeholder-transparent outline-none;
   }
   .contact-form input::placeholder {
     @apply text-gray-400;

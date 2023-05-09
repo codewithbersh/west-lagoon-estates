@@ -5,4 +5,12 @@ export type VillaType = {
     icon: IconType;
     description: string;
   }[];
+  ameneties: {
+    title: string;
+    description: string;
+    list: {
+      icon: JSX.Element;
+      description: string;
+    }[];
+  }[];
 };
