@@ -44,7 +44,6 @@ const ContactSection = () => {
 
   const onSubmit = (data: FormData) => console.log(data);
 
-  console.log(errors);
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

@@ -8,7 +8,6 @@ type Props = {
 };
 
 const AmenetiesSection = ({ villa }: Props) => {
-  console.log(villa.ameneties);
   return (
     <div className=" divide-y divide-solid">
       {villa.ameneties.map((amenety, index) => {
