@@ -11,7 +11,7 @@ type Props = {
 const offerClassName =
   "flex w-fit items-center gap-2 rounded border px-[14px] py-[14px] font-medium";
 
-const OfferSection = ({ villa }: Props) => {
+const Offers = ({ villa }: Props) => {
   return (
     <div className="space-y-4">
       <Heading className=" text-[22px] leading-none">
@@ -48,4 +48,4 @@ const OfferSection = ({ villa }: Props) => {
   );
 };
 
-export default OfferSection;
+export default Offers;

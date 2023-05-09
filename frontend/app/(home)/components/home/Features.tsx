@@ -11,6 +11,7 @@ import { FaFingerprint } from "react-icons/fa";
 import { TbMap2 } from "react-icons/tb";
 import { BiSwim } from "react-icons/bi";
 import { MdCheck } from "react-icons/md";
+import Container from "@/app/components/ui/Container";
 
 type FeaturesType = {
   img: StaticImageData; // not string
@@ -63,7 +64,7 @@ const features: FeaturesType[] = [
 
 const Features = () => {
   return (
-    <div className=" mx-auto max-w-5xl space-y-8 px-4 py-8">
+    <Container className="space-y-8">
       {/* title */}
       <div className=" mx-auto space-y-4">
         <Heading size="xl" className=" text-center">
@@ -118,7 +119,7 @@ const Features = () => {
           );
         })}
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -12,13 +12,8 @@ import beachFront from "@/public/beach-front.jpg";
 import { TbToolsKitchen2 } from "react-icons/tb";
 import { BiCloset } from "react-icons/bi";
 import { GiHomeGarage } from "react-icons/gi";
-import {
-  MdOutlinePool,
-  MdOutlineSevereCold,
-  MdWifi,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
-import Link from "next/link";
+import { MdOutlinePool, MdOutlineSevereCold, MdWifi } from "react-icons/md";
+import Container from "@/app/components/ui/Container";
 
 interface AmenetyInterface {
   icon: JSX.Element;
@@ -59,7 +54,7 @@ const ameneties: AmenetyInterface[] = [
 
 const HeroSection = () => {
   return (
-    <div className="container relative mx-auto max-w-5xl overflow-clip lg:flex lg:flex-row-reverse">
+    <Container className="relative overflow-clip lg:flex lg:flex-row-reverse">
       <Image
         className="h-[380px] object-cover brightness-75 md:h-[450px] lg:h-[540px] lg:max-w-[850px] lg:rounded lg:object-fill"
         src={beachFront}
@@ -113,7 +108,7 @@ const HeroSection = () => {
 
       {/* background color on desktop */}
       <div className="bottom-6 left-0 -z-50 hidden h-2/3 w-2/3 rounded bg-emerald-100 lg:absolute lg:block"></div>
-    </div>
+    </Container>
   );
 };
 

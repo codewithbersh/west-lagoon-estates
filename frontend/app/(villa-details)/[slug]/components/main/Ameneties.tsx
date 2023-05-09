@@ -7,7 +7,7 @@ type Props = {
   villa: VillaType;
 };
 
-const AmenetiesSection = ({ villa }: Props) => {
+const Ameneties = ({ villa }: Props) => {
   return (
     <div className=" divide-y divide-solid">
       {villa.ameneties.map((amenety, index) => {
@@ -42,4 +42,4 @@ const AmenetiesSection = ({ villa }: Props) => {
   );
 };
 
-export default AmenetiesSection;
+export default Ameneties;

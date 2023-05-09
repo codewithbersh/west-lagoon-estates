@@ -10,13 +10,14 @@ import { Button } from "@/app/components/ui/Button";
 import { BiChevronDown } from "react-icons/bi";
 import { Logo } from "@/app/components/ui/Logo";
 import ScrollLink from "@/app/components/ui/ScrollLink";
+import Container from "@/app/components/ui/Container";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 const NavBar = () => {
   const navLinkClassName = `text-sm text-gray-400 ${poppins.className} hover:text-emerald-600`;
   return (
-    <header className="mx-auto max-w-5xl px-4 py-4 lg:px-0">
+    <Container className=" py-4">
       <nav className="flex items-center justify-between">
         <Logo fill="#048757" />
         <Hamburger />
@@ -40,7 +41,7 @@ const NavBar = () => {
           <Button size="md">Contact Us</Button>
         </div>
       </nav>
-    </header>
+    </Container>
   );
 };
 

@@ -1,3 +1,4 @@
+import Container from "@/app/components/ui/Container";
 import Heading from "@/app/components/ui/Heading";
 import Small from "@/app/components/ui/Small";
 import { VillaType } from "@/types/villa";
@@ -20,7 +21,7 @@ type Props = {
 const HeadingSection = ({ villa }: Props) => {
   const { photos } = villa;
   return (
-    <div className="mx-auto max-w-5xl md:px-4 md:pt-8 lg:px-0">
+    <Container className="px-0 py-0 md:px-4 md:pt-8">
       {/* Heading Mobile */}
       <div className="md:hidden">
         {/* Photo */}
@@ -80,7 +81,7 @@ const HeadingSection = ({ villa }: Props) => {
           })}
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

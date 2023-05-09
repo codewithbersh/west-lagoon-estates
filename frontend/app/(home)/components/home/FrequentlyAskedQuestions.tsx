@@ -5,53 +5,12 @@ import { Disclosure } from "@headlessui/react";
 import Heading from "@/app/components/ui/Heading";
 import Paragraph from "@/app/components/ui/Paragraph";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
-
-type QuestionType = {
-  question: string;
-  answer: string;
-};
-
-const questions: QuestionType[] = [
-  {
-    question: "What types of properties do you offer?",
-    answer:
-      "We offer villa-type properties, with a choice of three different types to suit your needs. These include beachfront villas, villas near the pool and beach, and corner villas.",
-  },
-  {
-    question: "How do I schedule a viewing of a property?",
-    answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iure, iusto sed eum deleniti esse tenetur beatae. Nulla quos autem omnis expedita voluptatum ratione atque.",
-  },
-  {
-    question: "Do you offer any furnished properties?",
-    answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iure, iusto sed eum deleniti esse tenetur beatae. Nulla quos autem omnis expedita voluptatum ratione atque.",
-  },
-  {
-    question: "What utilities are included in the rent?",
-    answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iure, iusto sed eum deleniti esse tenetur beatae. Nulla quos autem omnis expedita voluptatum ratione atque.",
-  },
-  {
-    question: "What is your pet policy?",
-    answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iure, iusto sed eum deleniti esse tenetur beatae. Nulla quos autem omnis expedita voluptatum ratione atque.",
-  },
-  {
-    question: "Do you offer parking for residents?",
-    answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iure, iusto sed eum deleniti esse tenetur beatae. Nulla quos autem omnis expedita voluptatum ratione atque.",
-  },
-  {
-    question: "Are there any amenities or services included for residents?",
-    answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus iure, iusto sed eum deleniti esse tenetur beatae. Nulla quos autem omnis expedita voluptatum ratione atque.",
-  },
-];
+import { questions } from "@/contents/villa/faqs";
+import Container from "@/app/components/ui/Container";
 
 const FrequentlyAskedQuestions = () => {
   return (
-    <div id="FAQs" className=" mx-auto max-w-5xl space-y-10 px-4 pb-24 pt-8">
+    <Container className="space-y-10 pb-24 pt-8">
       <div className=" space-y-2 text-center">
         <Heading size="xl">Frequently Asked Questions</Heading>
         <Paragraph className=" mx-auto text-gray-500">
@@ -106,7 +65,7 @@ const FrequentlyAskedQuestions = () => {
           })}
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

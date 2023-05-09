@@ -32,7 +32,7 @@ const schema: ZodType<FormData> = z
     path: ["phone"],
   });
 
-const ContactSection = () => {
+const ContactCard = () => {
   const {
     control,
     register,
@@ -99,4 +99,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ContactCard;

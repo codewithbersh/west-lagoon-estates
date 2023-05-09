@@ -8,15 +8,13 @@ import { villas } from "@/contents/villa/villa-contents";
 
 const Home = () => {
   return (
-    <main>
+    <section>
       <HeroSection />
-      {/* <BenefitsSection /> */}
       <AvailableVillas villas={villas} />
       <Location />
-      {/* <Features /> */}
       <CallToAction />
       <FrequentlyAskedQuestions />
-    </main>
+    </section>
   );
 };
 

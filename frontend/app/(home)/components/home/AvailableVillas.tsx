@@ -5,6 +5,7 @@ import Paragraph from "@/app/components/ui/Paragraph";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { VillaType } from "@/types/villa";
 import AvailableVillaCards from "@/app/components/AvailableVillaCards";
+import Container from "@/app/components/ui/Container";
 
 type Props = {
   villas: VillaType[];
@@ -12,7 +13,7 @@ type Props = {
 
 const AvailableVillas = ({ villas }: Props) => {
   return (
-    <div className=" mx-auto max-w-5xl space-y-6 px-4 py-8 lg:px-0">
+    <Container className="space-y-6">
       {/* Heading */}
       <div className="flex flex-col gap-2">
         <Heading size="xl">Best Property Deals</Heading>
@@ -34,7 +35,7 @@ const AvailableVillas = ({ villas }: Props) => {
 
       {/* Card */}
       <AvailableVillaCards villas={villas} />
-    </div>
+    </Container>
   );
 };
 

@@ -2,13 +2,11 @@ import React from "react";
 import Heading from "@/app/components/ui/Heading";
 import Small from "@/app/components/ui/Small";
 import Paragraph from "@/app/components/ui/Paragraph";
+import Container from "@/app/components/ui/Container";
 
 const Location = () => {
   return (
-    <div
-      id="location"
-      className=" mx-auto max-w-5xl space-y-8 px-4 py-8 lg:px-0"
-    >
+    <Container className="space-y-8">
       <div className="space-y-2 sm:text-center">
         <Small className=" text-emerald-600">Visit Us</Small>
         <Heading size="xl">Get to Know Our Neighborhood</Heading>
@@ -22,7 +20,7 @@ const Location = () => {
         loading="lazy"
         className="h-[400px] w-full"
       ></iframe>
-    </div>
+    </Container>
   );
 };
 

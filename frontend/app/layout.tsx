@@ -1,5 +1,5 @@
-import Footer from "./components/footer/Footer";
 import "./globals.css";
+import Footer from "./components/Footer";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({

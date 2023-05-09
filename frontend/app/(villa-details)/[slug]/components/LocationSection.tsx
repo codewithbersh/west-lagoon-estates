@@ -5,13 +5,14 @@ import Paragraph from "@/app/components/ui/Paragraph";
 import { IoMdCheckmark } from "react-icons/io";
 import Small from "@/app/components/ui/Small";
 import { IoLocationOutline } from "react-icons/io5";
+import Container from "@/app/components/ui/Container";
 
 type Props = {};
 
 const LocationSection = (props: Props) => {
   const { title, description, benefits } = idealLocation;
   return (
-    <div className="mx-auto max-w-5xl space-y-4 px-4 py-8 lg:px-0">
+    <Container className="space-y-4">
       <div>
         <Heading className=" text-[22px]">Where you'll be</Heading>
         <Small className=" flex items-center gap-1">
@@ -42,7 +43,8 @@ const LocationSection = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+      <hr />
+    </Container>
   );
 };
 

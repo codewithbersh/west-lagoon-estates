@@ -5,6 +5,9 @@ import Heading from "@/app/components/ui/Heading";
 import { MdDashboardCustomize } from "react-icons/md";
 import { BsShieldFillCheck } from "react-icons/bs";
 import { GiCutDiamond } from "react-icons/gi";
+import Container from "@/app/components/ui/Container";
+
+// Not being used
 
 interface Benefit {
   svg: ReactNode;
@@ -37,7 +40,7 @@ const benefits: Benefit[] = [
 
 const BenefitsSection = () => {
   return (
-    <div className="relative mx-auto flex max-w-5xl flex-wrap items-center gap-8 overflow-hidden bg-emerald-50 py-4 text-center md:-translate-y-32 md:px-4 lg:-translate-y-0 lg:justify-between lg:px-0">
+    <Container className="relative mx-auto flex flex-wrap items-center gap-8 overflow-hidden bg-emerald-50 py-4 text-center md:-translate-y-32 md:px-4 lg:-translate-y-0 lg:justify-between lg:px-0">
       {benefits.map((benefit, index) => {
         return (
           <div
@@ -57,7 +60,7 @@ const BenefitsSection = () => {
           </div>
         );
       })}
-    </div>
+    </Container>
   );
 };
 
