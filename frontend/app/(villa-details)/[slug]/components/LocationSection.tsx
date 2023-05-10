@@ -14,7 +14,9 @@ const LocationSection = (props: Props) => {
   return (
     <Container className="space-y-4">
       <div>
-        <Heading className=" text-[22px]">Where you'll be</Heading>
+        <Heading className=" text-[22px]" id="location">
+          Where you'll be
+        </Heading>
         <Small className=" flex items-center gap-1">
           <IoLocationOutline />{" "}
           <span className=" underline">West Bay Lagoon, Leqtaifiya</span>

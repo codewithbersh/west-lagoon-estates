@@ -12,7 +12,9 @@ type Props = {
 const Ameneties = ({ villa }: Props) => {
   return (
     <Container className=" space-y-4 px-0">
-      <Heading className=" text-[22px]">What this villa offers</Heading>
+      <Heading className=" text-[22px]" id="amenities">
+        What this villa offers
+      </Heading>
       <div className=" flex flex-col gap-2 sm:flex-row sm:gap-6">
         {villa.ameneties.slice(0, 2).map((amenety, index) => {
           return (

@@ -1,3 +1,4 @@
+import ScrollLink from "@/app/components/ui/ScrollLink";
 import Link from "next/link";
 import React from "react";
 import { BsArrowLeftCircle } from "react-icons/bs";
@@ -32,9 +33,9 @@ const NavBar = () => {
 
         {/* Desktop Only Nav Links */}
         <div className=" hidden gap-6 md:flex">
-          <Link href="/">Photos</Link>
-          <Link href="/">Ameneties</Link>
-          <Link href="/">Location</Link>
+          <ScrollLink href="/#photos">Photos</ScrollLink>
+          <ScrollLink href="/#amenities">Amenities</ScrollLink>
+          <ScrollLink href="/#location">Location</ScrollLink>
         </div>
       </div>
     </div>

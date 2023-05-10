@@ -1,5 +1,5 @@
 import React from "react";
-import HeadingSection from "./components/HeadingSection";
+import HeadingSection from "./components/heading/HeadingSection";
 import LocationSection from "./components/LocationSection";
 import { villas } from "@/contents/villa/villa-contents";
 import OtherVillas from "./components/OtherVillas";
