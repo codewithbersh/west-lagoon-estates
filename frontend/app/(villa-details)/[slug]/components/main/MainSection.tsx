@@ -13,8 +13,8 @@ type Props = {
 
 const MainSection = ({ villa }: Props) => {
   return (
-    <Container>
-      <div className=" justify-between gap-12 md:flex">
+    <Container className=" border-b">
+      <div className=" relative justify-between gap-12 md:flex">
         <div>
           <Header villa={villa} />
           <AboutListing about={villa.about} />
@@ -25,8 +25,6 @@ const MainSection = ({ villa }: Props) => {
         {/* <ContactCard /> */}
         <ContactCTA />
       </div>
-
-      <hr />
     </Container>
   );
 };

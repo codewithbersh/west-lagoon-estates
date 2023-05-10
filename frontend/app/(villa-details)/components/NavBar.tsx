@@ -12,7 +12,7 @@ import { RiShareBoxLine } from "react-icons/ri";
 
 const NavBar = () => {
   return (
-    <div className="border-b shadow">
+    <div className="z-50 w-full border-b bg-white shadow md:fixed">
       <div className=" mx-auto flex max-w-5xl justify-between px-4 py-4 lg:px-0">
         {/* Desktop and Mobile */}
         <div className="flex items-center gap-2">

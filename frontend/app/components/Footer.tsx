@@ -37,7 +37,7 @@ const links: LinkType[] = [
 
 const Footer = () => {
   return (
-    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 py-8">
+    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 py-8 pb-[117px] md:pb-8">
       <hr className=" w-full" />
       <div className="flex flex-col gap-4 space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
         <Logo fill="#059669" />

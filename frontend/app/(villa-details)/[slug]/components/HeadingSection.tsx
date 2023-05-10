@@ -21,7 +21,7 @@ type Props = {
 const HeadingSection = ({ villa }: Props) => {
   const { photos } = villa;
   return (
-    <Container className="px-0 py-0 md:px-4 md:pt-8">
+    <Container className="px-0 py-0  md:px-4 md:pt-[72px]">
       {/* Heading Mobile */}
       <div className="md:hidden">
         {/* Photo */}
