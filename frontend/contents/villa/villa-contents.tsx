@@ -10,8 +10,10 @@ import { VillaType } from "@/types/villa";
 
 const beachFrontVilla: VillaType = {
   slug: "beach-front-villa",
-  title: "Beach Front Villa with 6 BR",
   cardTitle: "Beach Front Villa",
+  title: "Luxurious Beach Front Property",
+  about:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur aliquam dolorem qui itaque repellendus. Illo eligendi accusantium voluptatum odit. Placeat voluptatem impedit magnam pariatur provident eum ipsa hic a atque? Alias voluptates, nam commodi officiis architecto nulla. Modi totam accusantium nisi.",
   cardCaption:
     "Relax in luxury at this beach front villa with private beach and panoramic lagoon views.",
   bedroom: 6,
@@ -29,6 +31,8 @@ const poolFrontVilla: VillaType = {
   slug: "pool-front-villa",
   title: "Pool Front Villa with 6 BR",
   cardTitle: "Beach Front Villa",
+  about:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur aliquam dolorem qui itaque repellendus. Illo eligendi accusantium voluptatum odit. Placeat voluptatem impedit magnam pariatur provident eum ipsa hic a atque? Alias voluptates, nam commodi officiis architecto nulla. Modi totam accusantium nisi.",
   cardCaption:
     "Experience resort-style living in this villa with direct pool access and stunning beach views.",
   bedroom: 5,
@@ -46,6 +50,8 @@ const cornerVilla: VillaType = {
   slug: "corner-villa",
   title: "Beach Front Villa with 6 BR",
   cardTitle: "Corner Villa",
+  about:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur aliquam dolorem qui itaque repellendus. Illo eligendi accusantium voluptatum odit. Placeat voluptatem impedit magnam pariatur provident eum ipsa hic a atque? Alias voluptates, nam commodi officiis architecto nulla. Modi totam accusantium nisi.",
   cardCaption:
     "Escape to coastal luxury in this stunning 300m² single detached villa with beach and park views.",
   bedroom: 3,

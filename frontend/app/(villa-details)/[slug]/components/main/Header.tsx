@@ -9,14 +9,12 @@ type Props = {
 };
 
 const offerClassName =
-  "flex w-fit items-center gap-2 rounded border px-[14px] py-[14px] font-medium";
+  "flex w-fit items-center gap-2 rounded border px-[14px] py-[10px] font-medium";
 
-const Offers = ({ villa }: Props) => {
+const Header = ({ villa }: Props) => {
   return (
     <div className="space-y-4">
-      <Heading className=" text-[22px] leading-none">
-        What this villa offers
-      </Heading>
+      <Heading className=" text-[22px] leading-none">{villa.title}</Heading>
       <div className=" flex flex-wrap gap-2">
         {/* location feature */}
         <Small className={offerClassName}>
@@ -48,4 +46,4 @@ const Offers = ({ villa }: Props) => {
   );
 };
 
-export default Offers;
+export default Header;

@@ -2,6 +2,7 @@ export type VillaType = {
   slug: string;
   title: string;
   cardTitle: string;
+  about: string;
   cardCaption: string;
   bedroom: number;
   bathroom: number;

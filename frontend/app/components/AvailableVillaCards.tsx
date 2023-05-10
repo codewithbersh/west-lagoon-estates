@@ -42,7 +42,7 @@ const AvailableVillaCards = ({ villas }: Props) => {
                   <div className="">
                     <div className="space-y-2">
                       <Heading size="sm" className="font-medium">
-                        {villa.title}
+                        {villa.cardTitle}
                       </Heading>
                       <Paragraph className="h-[96px] font-light text-gray-500">
                         {villa.cardCaption}

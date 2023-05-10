@@ -53,7 +53,9 @@ const HeadingSection = ({ villa }: Props) => {
       <div className="hidden space-y-4 md:block">
         {/* Title */}
         <div className="space-y-1">
-          <Heading className=" text-[26px] leading-none">{villa.title}</Heading>
+          <Heading className=" text-[26px] leading-none">
+            {villa.cardTitle}
+          </Heading>
           <div className=" flex justify-between leading-none">
             <Small className=" flex items-center gap-1">
               <IoLocationOutline />{" "}

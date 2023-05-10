@@ -1,3 +1,5 @@
+import { Button } from "@/app/components/ui/Button";
+import Container from "@/app/components/ui/Container";
 import Heading from "@/app/components/ui/Heading";
 import Paragraph from "@/app/components/ui/Paragraph";
 import { VillaType } from "@/types/villa";
@@ -9,20 +11,12 @@ type Props = {
 
 const Ameneties = ({ villa }: Props) => {
   return (
-    <div className=" divide-y divide-solid">
-      {villa.ameneties.map((amenety, index) => {
-        return (
-          <div
-            key={index}
-            className="flex flex-col gap-6 py-8 md:flex-row md:gap-12"
-          >
-            <div className="space-y-2 md:w-1/2">
-              <Heading className=" text-gray-700">{amenety.title}</Heading>
-              <Paragraph className=" text-light text-gray-400">
-                {amenety.description}
-              </Paragraph>
-            </div>
-            <div className="flex flex-col  gap-4 md:w-1/2">
+    <Container className=" space-y-4 px-0">
+      <Heading className=" text-[22px]">What this villa offers</Heading>
+      <div className=" flex flex-col gap-2 sm:flex-row sm:gap-6">
+        {villa.ameneties.slice(0, 2).map((amenety, index) => {
+          return (
+            <div key={index} className="flex flex-col gap-2 sm:w-1/2">
               {amenety.list.map((item, index) => {
                 return (
                   <div
@@ -35,10 +29,17 @@ const Ameneties = ({ villa }: Props) => {
                 );
               })}
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+      <Button
+        variant="secondary"
+        size="md"
+        className=" bg-gray-100 font-medium tracking-normal text-gray-700"
+      >
+        View all amenities
+      </Button>
+    </Container>
   );
 };
 
