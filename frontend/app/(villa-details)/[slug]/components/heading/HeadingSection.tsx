@@ -11,9 +11,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { RiShareBoxLine } from "react-icons/ri";
 import PhotosCarousel from "./PhotosCarousel";
 
-import { CgMoreO } from "react-icons/cg";
-import { HiViewGrid } from "react-icons/hi";
 import { MdOutlineGridView } from "react-icons/md";
+import Link from "next/link";
 /* 
     TODO:
         - 'Show all photos' button in md screens above
@@ -67,7 +66,13 @@ const HeadingSection = ({ villa }: Props) => {
             </Heading>
             <Small className=" flex items-center gap-1">
               <IoLocationOutline />{" "}
-              <span className=" underline">West Bay Lagoon, Leqtaifiya</span>
+              <Link
+                href="https://www.google.com/maps?ll=25.36565,51.51235&z=15&t=m&hl=en&gl=QA&mapclient=embed&cid=9845095862073321625"
+                target="_blank"
+                className="cursor-pointer underline"
+              >
+                West Bay Lagoon, Leqtaifiya
+              </Link>
             </Small>
           </div>
         </div>
@@ -83,7 +88,13 @@ const HeadingSection = ({ villa }: Props) => {
           <div className=" flex justify-between leading-none">
             <Small className=" flex items-center gap-1">
               <IoLocationOutline />{" "}
-              <span className=" underline">West Bay Lagoon, Leqtaifiya</span>
+              <Link
+                href="https://www.google.com/maps?ll=25.36565,51.51235&z=15&t=m&hl=en&gl=QA&mapclient=embed&cid=9845095862073321625"
+                target="_blank"
+                className="cursor-pointer underline"
+              >
+                West Bay Lagoon, Leqtaifiya
+              </Link>
             </Small>
             <Small className=" flex items-center gap-1">
               <RiShareBoxLine /> <span className=" underline">Share</span>

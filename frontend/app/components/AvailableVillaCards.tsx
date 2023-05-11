@@ -30,10 +30,10 @@ const AvailableVillaCards = ({ villas }: Props) => {
         .map((villa, index) => {
           return (
             <Link href={`/${villa.slug}`} passHref key={index}>
-              <div className=" h-full max-w-[400px] rounded border shadow transition duration-300 ease-in-out hover:scale-105  hover:cursor-pointer hover:shadow-xl">
+              <div className=" h-full max-w-[400px] rounded-lg border shadow transition duration-300 ease-in-out hover:cursor-pointer  hover:border-gray-200 hover:shadow-lg">
                 <div className="object-fill">
                   <Image
-                    className="h-[200px] rounded-t object-cover"
+                    className="h-[200px] rounded-t-lg object-cover"
                     src={villa.photos[0]}
                     alt={villa.cardTitle}
                   />
