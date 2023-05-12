@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { RiShareBoxLine } from "react-icons/ri";
+import SharePopover from "../[slug]/components/heading/SharePopover";
 
 /*
   TODO:
@@ -14,7 +15,7 @@ import { RiShareBoxLine } from "react-icons/ri";
 const NavBar = () => {
   return (
     <div className="z-50 w-full border-b bg-white shadow md:fixed">
-      <div className=" mx-auto flex max-w-5xl justify-between px-4 py-4 lg:px-0">
+      <div className=" mx-auto flex max-w-5xl items-center justify-between px-4 py-4 lg:px-0">
         {/* Desktop and Mobile */}
         <div className="flex items-center gap-2">
           <BsArrowLeftCircle />
@@ -24,11 +25,8 @@ const NavBar = () => {
         </div>
 
         {/* Mobile Only Nav Links */}
-        <div className=" flex items-center gap-1 md:hidden">
-          <RiShareBoxLine />
-          <Link href="/" className=" font-medium underline">
-            Share
-          </Link>
+        <div className="h-fit md:hidden">
+          <SharePopover />
         </div>
 
         {/* Desktop Only Nav Links */}

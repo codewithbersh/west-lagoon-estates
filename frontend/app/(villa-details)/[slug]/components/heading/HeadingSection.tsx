@@ -13,6 +13,10 @@ import PhotosCarousel from "./PhotosCarousel";
 
 import { MdOutlineGridView } from "react-icons/md";
 import Link from "next/link";
+import { Popover } from "@headlessui/react";
+import { ArrowUpOnSquareIcon, ShareIcon } from "@heroicons/react/24/outline";
+import SharePopover from "./SharePopover";
+
 /* 
     TODO:
         - 'Show all photos' button in md screens above
@@ -96,9 +100,7 @@ const HeadingSection = ({ villa }: Props) => {
                 West Bay Lagoon, Leqtaifiya
               </Link>
             </Small>
-            <Small className=" flex items-center gap-1">
-              <RiShareBoxLine /> <span className=" underline">Share</span>
-            </Small>
+            <SharePopover />
           </div>
         </div>
 
