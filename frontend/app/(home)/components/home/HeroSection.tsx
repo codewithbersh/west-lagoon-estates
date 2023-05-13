@@ -14,6 +14,7 @@ import { BiCloset } from "react-icons/bi";
 import { GiHomeGarage } from "react-icons/gi";
 import { MdOutlinePool, MdOutlineSevereCold, MdWifi } from "react-icons/md";
 import Container from "@/app/components/ui/Container";
+import Link from "next/link";
 
 interface AmenetyInterface {
   icon: JSX.Element;
@@ -92,22 +93,23 @@ const HeroSection = () => {
         </div>
 
         <div className="flex space-x-3">
-          <Button size="lg" variant="secondary">
-            Explore Villas
-          </Button>
+          <Link passHref href="">
+            <Button size="lg">Get Started</Button>
+          </Link>
 
           <Button
             variant="outline"
             size="lg"
             className="border-gray-700 text-gray-700"
           >
-            Learn more
+            Explore Villas
           </Button>
         </div>
       </div>
 
       {/* background color on desktop */}
-      <div className="bottom-6 left-0 -z-50 hidden h-2/3 w-2/3 rounded bg-emerald-100 lg:absolute lg:block"></div>
+      <div className="bottom-2 left-0 -z-50 hidden h-2/3 w-2/3 rounded-lg bg-emerald-100 lg:absolute lg:block"></div>
+      <div className="absolute bottom-16 right-12 -z-50 hidden h-2/3 w-[90%] rounded-lg bg-emerald-100 min-[510px]:block"></div>
     </Container>
   );
 };
