@@ -8,13 +8,10 @@ import { VillaType } from "@/types/villa";
 import Image from "next/image";
 import React, { useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
-import { RiShareBoxLine } from "react-icons/ri";
 import PhotosCarousel from "./PhotosCarousel";
 
 import { MdOutlineGridView } from "react-icons/md";
 import Link from "next/link";
-import { Popover } from "@headlessui/react";
-import { ArrowUpOnSquareIcon, ShareIcon } from "@heroicons/react/24/outline";
 import SharePopover from "./SharePopover";
 
 /* 
@@ -34,7 +31,7 @@ const HeadingSection = ({ villa }: Props) => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <Container className="px-0 py-0  md:px-4 md:pt-[72px]" id="photos">
+    <Container className="px-0 md:px-4" id="photos">
       {/* Heading Mobile */}
       <div className=" md:hidden">
         {/* Photo */}

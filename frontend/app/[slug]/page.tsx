@@ -3,8 +3,9 @@ import HeadingSection from "./components/heading/HeadingSection";
 import LocationSection from "./components/LocationSection";
 import { villas } from "@/contents/villa/villa-contents";
 import OtherVillas from "./components/OtherVillas";
-import CallToAction from "@/app/(home)/components/home/CallToAction";
+import CallToAction from "@/app/components/home/CallToAction";
 import MainSection from "./components/main/MainSection";
+import ListingFooterMobile from "./components/ListingFooterMobile";
 
 type Props = {
   params: {
@@ -24,6 +25,7 @@ const VillaDetail = ({ params }: Props) => {
       <LocationSection />
       <OtherVillas villas={villas.filter((item) => item.slug !== villa.slug)} />
       <CallToAction />
+      <ListingFooterMobile />
     </section>
   );
 };

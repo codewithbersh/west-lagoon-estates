@@ -3,7 +3,7 @@
 import Heading from "@/app/components/ui/Heading";
 import Paragraph from "@/app/components/ui/Paragraph";
 import Small from "@/app/components/ui/Small";
-import useCopyToClipboard from "@/app/lib/hooks/useCopyToClipboard";
+import useCopyToClipboard from "@/app/hooks/useCopyToClipboard";
 import { Popover } from "@headlessui/react";
 import React, { useEffect, useState } from "react";
 import { FiShare } from "react-icons/fi";

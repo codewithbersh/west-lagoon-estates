@@ -55,7 +55,7 @@ const ameneties: AmenetyInterface[] = [
 
 const HeroSection = () => {
   return (
-    <Container className="relative overflow-clip px-0 pt-0 sm:px-4 lg:flex lg:flex-row-reverse">
+    <Container className="relative overflow-clip px-0 sm:px-4 lg:flex lg:flex-row-reverse">
       <Image
         className="h-[380px] object-cover brightness-75 sm:rounded-lg md:h-[450px] lg:h-[540px] lg:max-w-[850px] lg:object-fill"
         src={beachFront}

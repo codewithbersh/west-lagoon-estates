@@ -6,7 +6,7 @@ import React from "react";
 
 const ContactCTA = () => {
   return (
-    <div className=" sticky top-[72px] hidden h-fit max-w-[300px] flex-col items-center space-y-6 rounded border p-8 text-center shadow-lg md:flex">
+    <div className=" sticky top-[30px] hidden h-fit max-w-[300px] flex-col items-center space-y-6 rounded border p-8 text-center shadow-lg md:flex">
       <div className=" space-y-2">
         <Heading className="">Have something in mind?</Heading>
         <Paragraph className=" text-gray-500">
