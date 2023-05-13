@@ -7,9 +7,10 @@
     @apply text-gray-800;
   }
   .contact-form input {
-    @apply !placeholder-transparent outline-none;
+    @apply rounded-md border px-3 py-2 text-base text-gray-900 outline-none;
   }
-  .contact-form input::placeholder {
-    @apply text-gray-400;
-  }
+}
+
+.PhoneInputInput {
+  @apply !border-none !bg-inherit;
 }
