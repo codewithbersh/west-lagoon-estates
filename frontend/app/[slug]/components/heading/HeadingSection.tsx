@@ -31,7 +31,7 @@ const HeadingSection = ({ villa }: Props) => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <Container className="px-0 md:px-4" id="photos">
+    <Container className="px-0 py-0 md:px-4 md:py-8" id="photos">
       {/* Heading Mobile */}
       <div className=" md:hidden">
         {/* Photo */}
