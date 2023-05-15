@@ -8,19 +8,17 @@ import Small from "./ui/Small";
 import { AiOutlineCar } from "react-icons/ai";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { VillaType } from "@/types/villa";
+import { Text } from "./ui/Text";
 
 type Props = {
   villas: VillaType[];
 };
 
-const icon = {
-  size: 20,
-  style: { color: "#9ca3af" },
-};
-
 const amenitiesClasses = " flex gap-2 items-center text-gray-600";
 
 const AvailableVillaCards = ({ villas }: Props) => {
+  const iconSize = 20;
+  const iconClassName = "text-gray-500";
   const format = require("comma-number");
 
   return (
@@ -44,29 +42,30 @@ const AvailableVillaCards = ({ villas }: Props) => {
                       <Heading size="sm" className="font-medium">
                         {villa.cardTitle}
                       </Heading>
-                      <Paragraph className="h-[96px] font-light text-gray-500">
-                        {villa.cardCaption}
-                      </Paragraph>
+                      <Text className="h-[96px]">{villa.cardCaption}</Text>
                     </div>
 
                     <div className="flex justify-between">
                       <div className={amenitiesClasses}>
-                        <BiBed size={icon.size} style={icon.style} />
+                        <BiBed size={iconSize} className={iconClassName} />
                         <Small>{villa.bedroom}</Small>
                       </div>
 
                       <div className={amenitiesClasses}>
-                        <BiBath size={icon.size} style={icon.style} />
+                        <BiBath size={iconSize} className={iconClassName} />
                         <Small>{villa.bathroom}</Small>
                       </div>
 
                       <div className={amenitiesClasses}>
-                        <AiOutlineCar size={icon.size} style={icon.style} />
+                        <AiOutlineCar
+                          size={iconSize}
+                          className={iconClassName}
+                        />
                         <Small>{villa.garage}</Small>
                       </div>
 
                       <div className={amenitiesClasses}>
-                        <BiArea size={icon.size} style={icon.style} />
+                        <BiArea size={iconSize} className={iconClassName} />
                         <Small>{villa.area} m²</Small>
                       </div>
                     </div>
@@ -75,7 +74,9 @@ const AvailableVillaCards = ({ villas }: Props) => {
                   <hr />
                   <div className="flex items-center justify-between">
                     <div className=" flex items-start gap-[6px]">
-                      <span className=" text-sm leading-tight">QAR</span>
+                      <Text className="leading-tight" size="small">
+                        QAR
+                      </Text>
                       <Heading size="lg" className=" font-bold tracking-wide">
                         {format(villa.price)}
                       </Heading>

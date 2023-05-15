@@ -3,10 +3,10 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
 import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import { questions } from "@/contents/villa/faqs";
 import Container from "@/app/components/ui/Container";
+import { Text } from "../ui/Text";
 
 const FrequentlyAskedQuestions = () => {
   return (
@@ -14,10 +14,10 @@ const FrequentlyAskedQuestions = () => {
       {/* Heading */}
       <div className=" space-y-2 sm:text-center">
         <Heading size="xl">Frequently Asked Questions</Heading>
-        <Paragraph className=" max-w-full text-gray-500">
+        <Text className="max-w-full">
           Need help with something? Here are our most frequently asked
           questions.
-        </Paragraph>
+        </Text>
       </div>
 
       {/* Main */}
@@ -25,10 +25,10 @@ const FrequentlyAskedQuestions = () => {
         {/* subheading */}
         <div className=" space-y-2 sm:w-1/2">
           <Heading size="md">General FAQs</Heading>
-          <Paragraph className=" text-gray-500">
+          <Text>
             Everything you need to know about West Lagoon Estates is here. Can't
             find an answer? Contact our team.
-          </Paragraph>
+          </Text>
         </div>
 
         <div className="divide-y divide-solid border-b border-t sm:w-1/2">
@@ -37,7 +37,7 @@ const FrequentlyAskedQuestions = () => {
               <Disclosure key={index}>
                 {({ open }) => (
                   <div className="space-y-4 py-4">
-                    <Disclosure.Button className="flex w-full items-start justify-between gap-4 text-left">
+                    <Disclosure.Button className="flex w-full items-start justify-between gap-4 text-left text-gray-800">
                       {question.question}
 
                       {open ? (

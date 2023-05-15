@@ -1,57 +1,19 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
 // ui components
 import { Button } from "@/app/components/ui/Button";
 import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
-import Small from "@/app/components/ui/Small";
 
 // images and svgs
 import beachFront from "@/public/beach-front.jpg";
-import { TbToolsKitchen2 } from "react-icons/tb";
-import { BiCloset } from "react-icons/bi";
-import { GiHomeGarage } from "react-icons/gi";
-import { MdOutlinePool, MdOutlineSevereCold, MdWifi } from "react-icons/md";
 import Container from "@/app/components/ui/Container";
 import Link from "next/link";
-
-interface AmenetyInterface {
-  icon: JSX.Element;
-  title: string;
-}
-
-const icon = {
-  style: { color: "#d1d5db" },
-  size: 20,
-};
-
-const amenities: AmenetyInterface[] = [
-  {
-    icon: <TbToolsKitchen2 size={icon.size} style={icon.style} />,
-    title: "Kitchen Appliances",
-  },
-  {
-    icon: <BiCloset size={icon.size} style={icon.style} />,
-    title: "Built-in Wardrobes",
-  },
-  {
-    icon: <GiHomeGarage size={icon.size} style={icon.style} />,
-    title: "Covered Parking",
-  },
-  {
-    icon: <MdOutlinePool size={icon.size} style={icon.style} />,
-    title: "Pool and Beach",
-  },
-  {
-    icon: <MdOutlineSevereCold size={icon.size} style={icon.style} />,
-    title: "Centralized A/C",
-  },
-  {
-    icon: <MdWifi size={icon.size} style={icon.style} />,
-    title: "High-speed WiFi",
-  },
-];
+import { Text } from "@/app/components/ui/Text";
+import { heroAmenities } from "@/contents/hero-section/heroAmenities";
+import { links } from "@/contents/links/link";
 
 const HeroSection = () => {
   return (
@@ -63,29 +25,29 @@ const HeroSection = () => {
       />
 
       {/* card */}
-      <div className=" relative  -top-12 -mb-12 space-y-8 overflow-hidden border bg-white px-8 py-8 drop-shadow-lg min-[510px]:left-8 min-[510px]:max-w-[450px] min-[510px]:rounded md:-top-24 md:-mb-24 lg:absolute lg:left-8 lg:top-16 lg:mb-0">
-        <div className=" space-y-8">
-          <div className=" space-y-4">
+      <div className=" relative  -top-12 -mb-12 space-y-8 overflow-hidden border bg-white px-8 py-8 drop-shadow-lg min-[510px]:left-8 min-[510px]:max-w-[450px] min-[510px]:rounded-lg md:-top-24 md:-mb-24 lg:absolute lg:left-8 lg:top-24 lg:mb-0">
+        <div className=" space-y-4">
+          <div className=" space-y-2">
             <div>
-              <Small className="font-normal uppercase text-gray-500">
-                West Bay Lagoon
-              </Small>
+              <Text className="uppercase">West Bay Lagoon</Text>
               <Heading size="lg" className="leading-tight text-emerald-700">
                 Luxury Villas for Rent
               </Heading>
             </div>
-            <Paragraph className="font-light text-gray-900">
+            <Text>
               Find the perfect villa for rent in Doha, Qatar and experience
               luxurious living like never before.
-            </Paragraph>
+            </Text>
           </div>
 
-          <ul className="grid grid-cols-2 gap-4 font-light text-gray-500">
-            {amenities.map((amenety, index) => {
+          <ul className="grid grid-cols-2 gap-4">
+            {heroAmenities.map((amenity, index) => {
               return (
                 <li key={index} className={`flex w-fit items-center gap-2`}>
-                  <span>{amenety.icon}</span>
-                  <Small className=" sm:text-sm">{amenety.title}</Small>
+                  <amenity.icon size={20} className=" text-gray-500" />
+                  <Text size="small" weight="thin">
+                    {amenity.title}
+                  </Text>
                 </li>
               );
             })}
@@ -93,17 +55,20 @@ const HeroSection = () => {
         </div>
 
         <div className="flex space-x-3">
-          <Link passHref href="">
+          <Link passHref href={links.contact.href}>
             <Button size="lg">Get Started</Button>
           </Link>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-gray-700 text-gray-700"
+          <Link
+            href={
+              links.villas[Math.floor(Math.random() * links.villas.length)].href
+            }
+            passHref
           >
-            Explore Villas
-          </Button>
+            <Button variant="outline" size="lg">
+              View Villas
+            </Button>
+          </Link>
         </div>
       </div>
 

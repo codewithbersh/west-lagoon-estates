@@ -2,11 +2,8 @@
 
 import { NavContext } from "@/app/context/NavContext";
 import React, { useContext } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 
-type Props = {};
-
-const Hamburger = (props: Props) => {
+const Hamburger = () => {
   const { isOpen, setIsOpen } = useContext(NavContext);
 
   const handleOpen = () => {
@@ -14,7 +11,7 @@ const Hamburger = (props: Props) => {
   };
 
   const lineClassName =
-    "h-[3px] w-6 bg-emerald-700 transition duration-300 ease-in-out";
+    "h-[3px] w-6 bg-gray-800 transition duration-300 ease-in-out";
   return (
     <div onClick={handleOpen} className="cursor-pointer sm:hidden">
       <div className=" flex flex-col gap-1">
