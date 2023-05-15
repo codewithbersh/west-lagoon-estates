@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Small from "@/app/components/ui/Small";
-import { Logo } from "@/app/components/ui/Logo";
+import logoMobile from "@/public/images/logo.svg";
+import logoDesktop from "@/public/images/logo-desktop.svg";
+import Image from "next/image";
 
 type LinkType = {
   name: string;
@@ -33,11 +35,12 @@ const links: LinkType[] = [
 
 const Footer = () => {
   return (
-    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 py-8 pb-[117px] md:pb-8">
+    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 py-8 md:pb-8">
       <hr className=" w-full" />
       <div className="flex flex-col gap-4 space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
-        <Logo fill="#059669" />
-        <div className="grid grid-cols-2  gap-4 md:grid-cols-6">
+        <Image src={logoDesktop} alt="Logo" className="hidden sm:block" />
+        <Image src={logoMobile} alt="Logo" className="block sm:hidden" />
+        <div className="flex flex-wrap gap-8">
           {links.map((link, index) => {
             return (
               <Link className="" key={index} href={link.href}>

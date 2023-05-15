@@ -19,12 +19,9 @@ const CallToAction = () => {
             consultation and tour of our exclusive properties.
           </Text>
         </div>
-        <div className=" flex w-full flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
-          <Link href={links.contact.href}>
-            <Button
-              className=" w-full max-w-[400px] font-normal sm:w-fit"
-              size="lg"
-            >
+        <div className="flex w-full flex-col items-center justify-center space-y-2 px-4 sm:flex-row sm:space-x-2 sm:space-y-0">
+          <Link href={links.contact.href} passHref className=" w-full sm:w-fit">
+            <Button className="w-full font-normal sm:w-fit" size="lg">
               Get Started
             </Button>
           </Link>
@@ -32,9 +29,11 @@ const CallToAction = () => {
             href={
               links.villas[Math.floor(Math.random() * links.villas.length)].href
             }
+            passHref
+            className=" w-full sm:w-fit"
           >
             <Button
-              className=" w-full max-w-[400px] font-normal sm:w-fit"
+              className=" w-full font-normal sm:w-fit"
               variant="outline"
               size="lg"
             >

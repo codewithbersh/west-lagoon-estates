@@ -1,22 +1,22 @@
 "use client";
-
+// libraries
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Poppins } from "next/font/google";
-
-// ui components
-import Hamburger from "./Hamburger";
-import { Button } from "@/app/components/ui/Button";
-
-// svgs
-import { Logo } from "@/app/components/ui/Logo";
-import Container from "@/app/components/ui/Container";
-import { links } from "@/contents/links/link";
-import DropdownLink from "./DropdownLink";
-
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-import { motion } from "framer-motion";
+// components
+import MobileDropdown from "./MobileDropdown";
+import Container from "@/app/components/ui/Container";
+import DropdownLink from "./DropdownLink";
+import { Button } from "@/app/components/ui/Button";
+
+// imgs & contents
+import logoMobile from "@/public/images/logo.svg";
+import logoDesktop from "@/public/images/logo-desktop.svg";
+import { links } from "@/contents/links/link";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
@@ -24,13 +24,14 @@ const NavBar = () => {
   const navLinkClassName = `${poppins.className} text-sm hover:text-emerald-500 relative`;
   const pathname = usePathname();
   return (
-    <div className=" border-b">
+    <div className="relative border-b shadow-sm">
       <Container className="py-2">
         <nav className="flex items-center justify-between">
           <Link passHref href={links.home.href}>
-            <Logo fill="#048757" />
+            <Image src={logoDesktop} alt="Logo" className="hidden sm:block" />
+            <Image src={logoMobile} alt="Logo" className="block sm:hidden" />
           </Link>
-          <Hamburger />
+          <MobileDropdown />
 
           <div className="relative hidden items-center gap-6 sm:flex lg:gap-10">
             <Link

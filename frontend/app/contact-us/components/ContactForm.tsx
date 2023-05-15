@@ -28,12 +28,12 @@ const schema: ZodType<FormData> = z
     firstName: z
       .string()
       .nonempty("Name required")
-      .min(2, "Invalid name")
+      .min(2, "Name too short")
       .max(20, "Name too long"),
     lastName: z
       .string()
       .nonempty("Last name required")
-      .min(2, "Invalid last name")
+      .min(2, "Last name too short")
       .max(20, "Last name too long"),
     email: z.string().nonempty("Email required").email("Invalid email"),
     phone: z
@@ -163,7 +163,7 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
             <PhoneInputWithCountry
               international
               className={`rounded border bg-white px-3  py-2 ${
-                errors.phone && "border-rose-500 bg-rose-50"
+                errors.phone && "border-rose-500 !bg-rose-50"
               }`}
               defaultCountry="QA"
               id="phone_number"

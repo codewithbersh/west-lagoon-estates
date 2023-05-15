@@ -31,7 +31,7 @@ const AmenetiesDialog = ({ isOpen, setIsOpen, amenities }: Props) => {
       {/* Full-screen container to center the panel */}
       <div className="fixed inset-0 flex items-center justify-center !overflow-x-hidden">
         {/* The actual dialog panel  */}
-        <Dialog.Panel className=" mx-auto h-full w-full max-w-3xl !overflow-y-scroll rounded-lg bg-white sm:h-5/6 sm:max-h-[800px] sm:w-3/4">
+        <Dialog.Panel className=" mx-auto h-full w-full max-w-3xl !overflow-y-scroll bg-white sm:h-5/6 sm:max-h-[800px] sm:w-3/4 sm:rounded-lg">
           <div className="fixed w-full max-w-3xl rounded-t-lg bg-white px-4 py-4 sm:w-3/4">
             <AiOutlineCloseCircle
               size={30}

@@ -17,7 +17,9 @@ const ListingFooterMobile = () => {
           .
         </Paragraph>
       </div>
-      <Button className=" shrink-0">Contact Us</Button>
+      <Link href="/contact-us" passHref>
+        <Button className=" shrink-0">Contact Us</Button>
+      </Link>
     </div>
   );
 };

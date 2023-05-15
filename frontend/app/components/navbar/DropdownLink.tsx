@@ -30,9 +30,8 @@ const DropdownLink = ({ className, children, ...props }: Props) => {
             </Menu.Button>
             <Menu.Items className="absolute -left-[190px] top-[40px] z-10 flex w-[250px] flex-col rounded-lg border bg-white p-2">
               {links.villas.map((item, index) => (
-                <Menu.Item>
+                <Menu.Item key={index}>
                   <Link
-                    key={index}
                     href={item.href}
                     className="relative flex w-full cursor-pointer flex-col  rounded-lg p-3 hover:bg-gray-50"
                   >
