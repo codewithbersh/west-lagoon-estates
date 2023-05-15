@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export type VillaType = {
   slug: string;
   title: string;
@@ -10,12 +12,15 @@ export type VillaType = {
   area: number;
   locationFeature: string;
   price: number;
-  photos: StaticImageData[];
-  ameneties: {
+  photos: {
+    image: StaticImageData;
+    alt: string;
+  }[];
+  amenities: {
     title: string;
     description: string;
     list: {
-      icon: JSX.Element;
+      Icon: IconType;
       description: string;
     }[];
   }[];

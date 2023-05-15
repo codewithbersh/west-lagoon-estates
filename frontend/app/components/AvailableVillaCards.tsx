@@ -34,7 +34,7 @@ const AvailableVillaCards = ({ villas }: Props) => {
                 <div className="object-fill">
                   <Image
                     className="h-[200px] rounded-t-lg object-cover"
-                    src={villa.photos[0]}
+                    src={villa.photos[0].image}
                     alt={villa.cardTitle}
                   />
                 </div>

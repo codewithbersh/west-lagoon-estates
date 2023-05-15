@@ -41,9 +41,9 @@ const HeadingSection = ({ villa }: Props) => {
         >
           {photos.length > 0 && (
             <Image
-              className=" min-h-[320px] object-cover hover:brightness-75"
-              src={photos[0]}
-              alt=""
+              className="w-full object-cover hover:brightness-75"
+              src={photos[0].image}
+              alt={photos[0].alt}
             />
           )}
           <Button className="absolute bottom-4 right-4 rounded bg-black  bg-opacity-40 px-3 py-1 text-xs font-bold tracking-widest text-white">
@@ -114,8 +114,8 @@ const HeadingSection = ({ villa }: Props) => {
                 } ${index === 2 && "rounded-tr-lg"} ${
                   index === 4 && "rounded-br-lg"
                 } h-full cursor-pointer object-cover transition-all duration-200 ease-in-out hover:brightness-75`}
-                src={photo}
-                alt={`${index}`}
+                src={photo.image}
+                alt={photo.alt}
                 priority
                 onClick={() => {
                   setSelectedItem(index);

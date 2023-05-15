@@ -1,5 +1,4 @@
 import Paragraph from "@/app/components/ui/Paragraph";
-import { VillaType } from "@/types/villa";
 import React from "react";
 
 interface Props {

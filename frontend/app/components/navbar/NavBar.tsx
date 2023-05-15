@@ -25,8 +25,6 @@ const NavBar = () => {
   const navLinkClassName = `text-gray-400 ${poppins.className} hover:text-emerald-600 relative`;
   const pathname = usePathname();
   const villaPaths = [links.villas.map((villa) => villa.href)];
-  console.log(villaPaths);
-  console.log(pathname);
   return (
     <div className=" border-b">
       <Container className="py-2">

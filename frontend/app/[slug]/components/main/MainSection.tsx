@@ -1,7 +1,6 @@
 import Container from "@/app/components/ui/Container";
 import React from "react";
-import Ameneties from "./Ameneties";
-import ContactCard from "./ContactCard";
+import Amenities from "./Amenities";
 import { VillaType } from "@/types/villa";
 import Header from "./Header";
 import ContactCTA from "./ContactCTA";
@@ -18,11 +17,8 @@ const MainSection = ({ villa }: Props) => {
         <div>
           <Header villa={villa} />
           <AboutListing about={villa.about} />
-          <Ameneties villa={villa} />
+          <Amenities villa={villa} />
         </div>
-
-        {/* Desktop only Contact Card */}
-        {/* <ContactCard /> */}
         <ContactCTA />
       </div>
     </Container>

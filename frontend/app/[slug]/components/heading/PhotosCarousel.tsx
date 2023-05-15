@@ -2,24 +2,24 @@
 
 import { Dialog } from "@headlessui/react";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image, { StaticImageData } from "next/image";
 import { useMediaQuery } from "@react-hook/media-query";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import { SlClose } from "react-icons/sl";
-import { AiOutlineCloseSquare } from "react-icons/ai";
 
 type Props = {
   isOpen: boolean;
-  photos: StaticImageData[];
+  photos: {
+    image: StaticImageData;
+    alt: string;
+  }[];
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   selectedItem: number;
 };
 
 const PhotosCarousel = ({ isOpen, setIsOpen, photos, selectedItem }: Props) => {
   const md = useMediaQuery("(min-width: 768px)");
-
   const [currentIndex, setCurrentIndex] = useState(selectedItem);
   useEffect(() => {
     setCurrentIndex(selectedItem);
@@ -63,8 +63,8 @@ const PhotosCarousel = ({ isOpen, setIsOpen, photos, selectedItem }: Props) => {
             {photos.map((photo, index) => (
               <div key={index} className="h-[calc(90vw-36px)] max-h-[500px]">
                 <Image
-                  src={photo}
-                  alt={photo.src}
+                  src={photo.image}
+                  alt={photo.alt}
                   className=" h-full w-full object-cover"
                 />
               </div>

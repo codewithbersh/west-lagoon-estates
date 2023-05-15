@@ -1,6 +1,7 @@
-import { FormData } from "@/app/(home)/contact-us/page";
+import { FormData } from "@/app/contact-us/components/ContactForm";
 import sgMail from "@sendgrid/mail";
 
+//  store API KEY in process.env
 sgMail.setApiKey(
   "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"
 );

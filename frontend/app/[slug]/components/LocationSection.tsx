@@ -7,9 +7,7 @@ import Small from "@/app/components/ui/Small";
 import { IoLocationOutline } from "react-icons/io5";
 import Container from "@/app/components/ui/Container";
 
-type Props = {};
-
-const LocationSection = (props: Props) => {
+const LocationSection = () => {
   const { title, description, benefits } = idealLocation;
   return (
     <Container className="space-y-4">

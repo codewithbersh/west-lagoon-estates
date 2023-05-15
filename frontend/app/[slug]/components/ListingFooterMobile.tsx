@@ -4,9 +4,7 @@ import Paragraph from "@/app/components/ui/Paragraph";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const ListingFooterMobile = (props: Props) => {
+const ListingFooterMobile = () => {
   return (
     <div className="fixed bottom-0 flex w-full items-center justify-between border-t bg-white px-4 py-6 md:hidden">
       <div>

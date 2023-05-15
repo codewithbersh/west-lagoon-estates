@@ -21,8 +21,6 @@ TODO:
     links to messenger & whatsapp
  */
 
-type Props = {};
-
 const links = [
   {
     Icon: MdOutlineContentCopy,
@@ -42,7 +40,7 @@ const links = [
   },
 ];
 
-const SharePopover = (props: Props) => {
+const SharePopover = () => {
   const [value, copy] = useCopyToClipboard();
   const handleEmailButton = () => {
     const recipient = "example@example.com";

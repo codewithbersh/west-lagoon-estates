@@ -26,7 +26,7 @@ const icon = {
   size: 20,
 };
 
-const ameneties: AmenetyInterface[] = [
+const amenities: AmenetyInterface[] = [
   {
     icon: <TbToolsKitchen2 size={icon.size} style={icon.style} />,
     title: "Kitchen Appliances",
@@ -55,7 +55,7 @@ const ameneties: AmenetyInterface[] = [
 
 const HeroSection = () => {
   return (
-    <Container className="relative overflow-clip px-0 sm:px-4 lg:flex lg:flex-row-reverse">
+    <Container className="relative overflow-clip px-0 py-0 sm:px-4 sm:py-8 lg:flex lg:flex-row-reverse">
       <Image
         className="h-[380px] object-cover brightness-75 sm:rounded-lg md:h-[450px] lg:h-[540px] lg:max-w-[850px] lg:object-fill"
         src={beachFront}
@@ -81,7 +81,7 @@ const HeroSection = () => {
           </div>
 
           <ul className="grid grid-cols-2 gap-4 font-light text-gray-500">
-            {ameneties.map((amenety, index) => {
+            {amenities.map((amenety, index) => {
               return (
                 <li key={index} className={`flex w-fit items-center gap-2`}>
                   <span>{amenety.icon}</span>

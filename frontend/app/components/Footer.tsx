@@ -14,24 +14,20 @@ const links: LinkType[] = [
     href: "/",
   },
   {
-    name: "Villas",
-    href: "/",
+    name: "Beach Front",
+    href: "/beach-front-villa",
   },
   {
-    name: "About",
-    href: "/",
+    name: "Pool Front",
+    href: "/pool-front-villa",
   },
   {
-    name: "Blogs",
-    href: "/",
+    name: "Corner Villa",
+    href: "/corner-villa",
   },
   {
     name: "Location",
-    href: "/",
-  },
-  {
-    name: "Brochure",
-    href: "/",
+    href: "https://www.google.com/maps?ll=25.36565,51.51235&z=15&t=m&hl=en&gl=QA&mapclient=embed&cid=9845095862073321625",
   },
 ];
 
