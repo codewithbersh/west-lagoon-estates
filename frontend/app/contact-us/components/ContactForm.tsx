@@ -43,7 +43,7 @@ const schema: ZodType<FormData> = z
     phone: z
       .string({ invalid_type_error: "Phone number required" })
       .nonempty("Phone number required"),
-    message: z.string(),
+    message: z.string().nonempty("Message required"),
   })
   .refine((data) => isPossiblePhoneNumber(data.phone) === true, {
     message: "Invalid phone number",
@@ -199,6 +199,14 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
               {...register("message")}
               className="w-full resize-none rounded-md border px-3 py-2 text-base text-gray-900 outline-none"
             />
+            <Text
+              size="small"
+              className={`-translate-y-1 text-rose-500 ${
+                errors.phone ? "visible" : "invisible"
+              }`}
+            >
+              {errors.phone ? errors.message?.message : "."}
+            </Text>
           </div>
 
           <Button
