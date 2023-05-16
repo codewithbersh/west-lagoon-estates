@@ -63,7 +63,7 @@ const MobileDropdown: FC<Props> = ({ className, ...props }) => {
 
                     <hr />
                     <Menu.Item>
-                      <Link className={`px-4`} href="/">
+                      <Link className={`px-4`} href={links.contact.href}>
                         <Button className=" w-full max-w-sm">Contact Us</Button>
                       </Link>
                     </Menu.Item>

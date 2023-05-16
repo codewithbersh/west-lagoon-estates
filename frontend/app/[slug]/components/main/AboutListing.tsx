@@ -1,5 +1,4 @@
-import Paragraph from "@/app/components/ui/Paragraph";
-import React from "react";
+import { Text } from "@/app/components/ui/Text";
 
 interface Props {
   about: string;
@@ -7,8 +6,8 @@ interface Props {
 
 const AboutListing = ({ about }: Props) => {
   return (
-    <div className=" space-y-6 pt-6">
-      <Paragraph>{about}</Paragraph>
+    <div className="space-y-6 pt-6">
+      <Text>{about}</Text>
       <hr />
     </div>
   );

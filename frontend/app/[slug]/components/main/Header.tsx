@@ -1,7 +1,9 @@
+// components
 import Heading from "@/app/components/ui/Heading";
-import Small from "@/app/components/ui/Small";
+import { Text } from "@/app/components/ui/Text";
+
+// icons & type
 import { VillaType } from "@/types/villa";
-import React from "react";
 import { BiArea, BiBath, BiBed, BiSwim } from "react-icons/bi";
 
 type Props = {
@@ -9,37 +11,35 @@ type Props = {
 };
 
 const offerClassName =
-  "flex w-fit items-center gap-2 rounded border px-[14px] py-[10px] font-medium";
+  "flex w-fit items-center gap-2 rounded border px-[14px] py-[10px]";
 
 const Header = ({ villa }: Props) => {
   return (
-    <div className="space-y-4">
-      <Heading className=" text-[22px] leading-none">{villa.title}</Heading>
+    <div className="space-y-6">
+      <Heading size="md">{villa.title}</Heading>
       <div className=" flex flex-wrap gap-2">
         {/* location feature */}
-        <Small className={offerClassName}>
-          {/* change later into condition */}
-          <BiSwim />
-          <span>{villa.locationFeature}</span>
-        </Small>
+        <div className={offerClassName}>
+          <BiSwim className=" text-gray-800" />
+          <Text size="small">{villa.locationFeature}</Text>
+        </div>
 
         {/* beds */}
-        <Small className={offerClassName}>
-          <BiBed />
-          <span>{villa.bedroom} Bedrooms</span>
-        </Small>
+        <div className={offerClassName}>
+          <BiBed className=" text-gray-800" />
+          <Text size="small">{villa.bedroom} Bedrooms</Text>
+        </div>
 
         {/* baths */}
-        <Small className={offerClassName}>
-          <BiBath />
-          <span>{villa.bathroom} Bathrooms</span>
-        </Small>
+        <div className={offerClassName}>
+          <BiBath className=" text-gray-800" />
+          <Text size="small">{villa.bathroom} Bathrooms</Text>
+        </div>
 
-        {/* area */}
-        <Small className={offerClassName}>
-          <BiArea />
-          <span>{villa.area}m² Property</span>
-        </Small>
+        <div className={offerClassName}>
+          <BiArea className=" text-gray-800" />
+          <Text size="small">{villa.area}m² Property</Text>
+        </div>
       </div>
       <hr />
     </div>

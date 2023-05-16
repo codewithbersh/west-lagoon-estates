@@ -1,14 +1,17 @@
+// libraries
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+// components
 import Heading from "./ui/Heading";
-import Paragraph from "./ui/Paragraph";
+import { Text } from "./ui/Text";
+
+// icons & types
 import { BiArea, BiBath, BiBed } from "react-icons/bi";
-import Small from "./ui/Small";
+import { VillaType } from "@/types/villa";
 import { AiOutlineCar } from "react-icons/ai";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { VillaType } from "@/types/villa";
-import { Text } from "./ui/Text";
 
 type Props = {
   villas: VillaType[];
@@ -48,12 +51,12 @@ const AvailableVillaCards = ({ villas }: Props) => {
                     <div className="flex justify-between">
                       <div className={amenitiesClasses}>
                         <BiBed size={iconSize} className={iconClassName} />
-                        <Small>{villa.bedroom}</Small>
+                        <Text size="small">{villa.bedroom}</Text>
                       </div>
 
                       <div className={amenitiesClasses}>
                         <BiBath size={iconSize} className={iconClassName} />
-                        <Small>{villa.bathroom}</Small>
+                        <Text size="small">{villa.bathroom}</Text>
                       </div>
 
                       <div className={amenitiesClasses}>
@@ -61,12 +64,12 @@ const AvailableVillaCards = ({ villas }: Props) => {
                           size={iconSize}
                           className={iconClassName}
                         />
-                        <Small>{villa.garage}</Small>
+                        <Text size="small">{villa.garage}</Text>
                       </div>
 
                       <div className={amenitiesClasses}>
                         <BiArea size={iconSize} className={iconClassName} />
-                        <Small>{villa.area} m²</Small>
+                        <Text size="small">{villa.area} m²</Text>
                       </div>
                     </div>
                   </div>
@@ -82,9 +85,12 @@ const AvailableVillaCards = ({ villas }: Props) => {
                       </Heading>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Paragraph className=" text-sm font-medium tracking-wide text-emerald-600">
+                      <Text
+                        size="small"
+                        className="font-medium tracking-wide text-emerald-600"
+                      >
                         View Villa
-                      </Paragraph>
+                      </Text>
                       <MdOutlineKeyboardArrowRight
                         size={24}
                         className=" text-emerald-600"

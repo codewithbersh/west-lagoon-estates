@@ -1,10 +1,12 @@
+// components
 import Container from "@/app/components/ui/Container";
-import React from "react";
-import Amenities from "./Amenities";
-import { VillaType } from "@/types/villa";
 import Header from "./Header";
 import ContactCTA from "./ContactCTA";
 import AboutListing from "./AboutListing";
+import Amenities from "./Amenities";
+
+// types
+import { VillaType } from "@/types/villa";
 
 type Props = {
   villa: VillaType;
@@ -12,7 +14,7 @@ type Props = {
 
 const MainSection = ({ villa }: Props) => {
   return (
-    <Container className=" border-b">
+    <Container className="space-y-6 py-0 pt-6 md:pt-0">
       <div className=" relative justify-between gap-12 md:flex">
         <div>
           <Header villa={villa} />
@@ -21,6 +23,7 @@ const MainSection = ({ villa }: Props) => {
         </div>
         <ContactCTA />
       </div>
+      <hr />
     </Container>
   );
 };

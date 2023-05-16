@@ -1,14 +1,14 @@
 "use client";
 
 import { BiBath, BiCctv } from "react-icons/bi";
-import { FaSink, FaSwimmingPool, FaTemperatureLow } from "react-icons/fa";
+import { FaSwimmingPool, FaTemperatureLow } from "react-icons/fa";
 import { GiBasketballBasket, GiKidSlide, GiTennisRacket } from "react-icons/gi";
 import { IoIosSnow } from "react-icons/io";
 import {
   MdOutlineBalcony,
+  MdOutlineBathroom,
   MdOutlineGarage,
   MdOutlineMicrowave,
-  MdOutlineShower,
 } from "react-icons/md";
 import { RiArchiveDrawerLine, RiPlantLine } from "react-icons/ri";
 import { TbCooker, TbFridge, TbTrees } from "react-icons/tb";
@@ -27,11 +27,7 @@ const amenityBedroom: AmenityType[] = [
   },
   {
     Icon: MdOutlineBalcony,
-    description: "Two balconies",
-  },
-  {
-    Icon: BiBath,
-    description: "Private bathroom",
+    description: "Balconies",
   },
 ];
 
@@ -41,12 +37,8 @@ const amenityBathroom: AmenityType[] = [
     description: "Bath tub",
   },
   {
-    Icon: MdOutlineShower,
+    Icon: MdOutlineBathroom,
     description: "Shower",
-  },
-  {
-    Icon: FaSink,
-    description: "Vanity sinks",
   },
 ];
 

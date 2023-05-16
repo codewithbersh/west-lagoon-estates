@@ -1,11 +1,14 @@
 "use client";
 
+// libraries
 import { Dialog } from "@headlessui/react";
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image, { StaticImageData } from "next/image";
 import { useMediaQuery } from "@react-hook/media-query";
+
+// images
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 type Props = {
@@ -33,12 +36,11 @@ const PhotosCarousel = ({ isOpen, setIsOpen, photos, selectedItem }: Props) => {
       onClose={() => setIsOpen(false)}
       className="relative z-50   place-items-center"
     >
-      {/* The backdrop, rendered as a fixed sibling to the panel container */}
+      {/* backdrop */}
       <div className="fixed inset-0 bg-black" aria-hidden="true" />
-
-      {/* Full-screen container to center the panel */}
+      {/* full screen container */}
       <div className="fixed inset-0 flex items-center justify-center sm:p-4">
-        {/* The actual dialog panel  */}
+        {/* dialog */}
         <Dialog.Panel className="flex h-full w-full max-w-5xl flex-col items-center justify-center ">
           <div className=" absolute top-0 mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 lg:px-0">
             <IoCloseCircleOutline

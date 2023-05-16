@@ -1,11 +1,15 @@
 "use client";
 
-import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
-import Small from "@/app/components/ui/Small";
-import useCopyToClipboard from "@/app/hooks/useCopyToClipboard";
+// libraries
+import { useEffect, useState } from "react";
 import { Popover } from "@headlessui/react";
-import React, { useEffect, useState } from "react";
+
+// components
+import Heading from "@/app/components/ui/Heading";
+import useCopyToClipboard from "@/app/hooks/useCopyToClipboard";
+import { Text } from "@/app/components/ui/Text";
+
+// icons
 import { FiShare } from "react-icons/fi";
 import {
   MdOutlineContentCopy,
@@ -14,12 +18,6 @@ import {
 } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { AiFillCheckCircle } from "react-icons/ai";
-
-/*
-TODO:
-    update mailto,
-    links to messenger & whatsapp
- */
 
 const links = [
   {
@@ -68,7 +66,6 @@ const SharePopover = () => {
   return (
     <Popover className="relative">
       {({ open }) => (
-        /* Use the `open` state to conditionally change the direction of the chevron icon. */
         <>
           <Popover.Button
             className={`flex items-end justify-end gap-[6px] rounded-lg px-3 py-2 outline-none hover:bg-gray-50 ${
@@ -76,7 +73,9 @@ const SharePopover = () => {
             }`}
           >
             <FiShare />
-            <Small className=" leading-[12px]">Share</Small>
+            <Text size="small" className="leading-[12px]">
+              Share
+            </Text>
           </Popover.Button>
           <Popover.Panel className="absolute z-10 -translate-x-[238px] translate-y-[10px]   space-y-2 rounded-lg border bg-white pt-4">
             <div className="columns-2 space-y-4 px-4">
@@ -102,15 +101,15 @@ const SharePopover = () => {
                   <div className="rounded-lg bg-emerald-50 p-2">
                     <item.Icon className=" text-emerald-700" size={24} />
                   </div>
-                  <Small>{item.title}</Small>
+                  <Text size="small">{item.title}</Text>
                 </div>
               ))}
             </div>
             <div className=" space-y-1 bg-gray-100 px-6 py-4 text-base">
-              <Heading className="">Spread the word</Heading>
-              <Paragraph className="font-light">
+              <Heading>Spread the word</Heading>
+              <Text className="font-light">
                 Share it with your friends and family
-              </Paragraph>
+              </Text>
             </div>
             <div
               className={`absolute bottom-[12px] left-0 right-0 ml-auto mr-auto flex w-fit items-center gap-[6px] rounded-lg border bg-white px-3 py-2 text-sm  shadow-2xl transition-all duration-200 ease-in-out ${

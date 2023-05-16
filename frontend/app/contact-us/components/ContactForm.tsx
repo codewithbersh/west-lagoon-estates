@@ -1,6 +1,7 @@
 "use client";
 
-import React, { FC, HTMLAttributes, useState } from "react";
+// libraries
+import { FC, HTMLAttributes, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z, ZodType } from "zod";
@@ -8,12 +9,15 @@ import { isPossiblePhoneNumber } from "react-phone-number-input";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
 import "react-phone-number-input/style.css";
 import TextareaAutosize from "react-textarea-autosize";
+
+// components
 import { Button } from "@/app/components/ui/Button";
-import { cn } from "@/app/lib/utils";
-import Small from "@/app/components/ui/Small";
 import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
+import { Text } from "@/app/components/ui/Text";
+
+// icons & utils
 import { CgSpinner } from "react-icons/cg";
+import { cn } from "@/app/lib/utils";
 
 export type FormData = {
   firstName: string;
@@ -85,15 +89,15 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
       {/* show desktop */}
       <header className=" space-y-4 md:hidden">
         <div className=" space-y-2">
-          <Small className=" font-medium text-emerald-700">Contact us</Small>
-          <Heading className=" text-2xl leading-none">
-            Chat to our friendly team
-          </Heading>
+          <Text size="small" className="font-medium text-emerald-600">
+            Contact us
+          </Text>
+          <Heading size="md">Chat to our friendly team</Heading>
         </div>
-        <Paragraph className=" text-gray-500">
+        <Text>
           We'd love to hear from you. Please fill out this form or shoot us an
           email.
-        </Paragraph>
+        </Text>
       </header>
 
       <main className=" rounded-lg border p-8 ">
@@ -113,13 +117,14 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
                 id="first_name"
                 {...register("firstName")}
               />
-              <Small
+              <Text
+                size="small"
                 className={`-translate-y-1 text-rose-500 ${
                   errors.firstName ? "visible" : "invisible"
                 }`}
               >
                 {errors.firstName ? errors.firstName.message : "."}
-              </Small>
+              </Text>
             </div>
 
             {/* last name */}
@@ -130,13 +135,14 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
                 id="last_name"
                 {...register("lastName")}
               />
-              <Small
+              <Text
+                size="small"
                 className={`-translate-y-1 text-rose-500 ${
                   errors.lastName ? "visible" : "invisible"
                 }`}
               >
                 {errors.lastName && errors.lastName.message}
-              </Small>
+              </Text>
             </div>
           </section>
 
@@ -148,13 +154,14 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
               id="email"
               {...register("email")}
             />
-            <Small
+            <Text
+              size="small"
               className={`-translate-y-1 text-rose-500 ${
                 errors.email ? "visible" : "invisible"
               }`}
             >
               {errors.email ? errors.email.message : "."}
-            </Small>
+            </Text>
           </div>
 
           {/* phone number */}
@@ -172,13 +179,14 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
               rules={{ required: true }}
               placeholder="Phone number"
             />
-            <Small
+            <Text
+              size="small"
               className={`-translate-y-1 text-rose-500 ${
                 errors.phone ? "visible" : "invisible"
               }`}
             >
               {errors.phone ? errors.phone.message : "."}
-            </Small>
+            </Text>
           </div>
 
           {/* message */}

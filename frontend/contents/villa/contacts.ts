@@ -24,13 +24,13 @@ export const contacts: ContactType[] = [
     Icon: MdOutlineWhatsapp,
     name: "WhatsApp",
     caption: "Our friendly team is here to help.",
-    detail: "hello@westlagoonestates.com",
+    detail: "+974-3322-2233",
   },
   {
     Icon: MdOutlineMail,
     name: "Email",
     caption: "Our friendly team is here to help.",
-    detail: "+974-3222-2223",
+    detail: "hello@westlagoonestates.com",
   },
   {
     Icon: MdOutlineLocationOn,

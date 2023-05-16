@@ -1,11 +1,18 @@
 "use client";
 
-import React, { HTMLAttributes } from "react";
+// libraries
+import { HTMLAttributes } from "react";
 import { Menu } from "@headlessui/react";
 import { BiChevronDown } from "react-icons/bi";
-import { links } from "@/contents/links/link";
 import Link from "next/link";
-import Paragraph from "../ui/Paragraph";
+
+// components
+import { Text } from "../ui/Text";
+
+// contents
+import { links } from "@/contents/links/link";
+
+// utils
 import { cn } from "@/app/lib/utils";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
@@ -19,7 +26,7 @@ const DropdownLink = ({ className, children, ...props }: Props) => {
             <Menu.Button
               className={cn("relative flex items-center gap-1", className)}
             >
-              Villas{" "}
+              Villas
               <BiChevronDown
                 size={14}
                 className={`transition-all duration-300 ease-in-out ${
@@ -35,12 +42,8 @@ const DropdownLink = ({ className, children, ...props }: Props) => {
                     href={item.href}
                     className="relative flex w-full cursor-pointer flex-col  rounded-lg p-3 hover:bg-gray-50"
                   >
-                    <Paragraph className=" text-gray-700">
-                      {item.label}
-                    </Paragraph>
-                    <Paragraph className=" text-sm text-gray-500">
-                      {item.caption}
-                    </Paragraph>
+                    <Text className=" text-gray-800">{item.label}</Text>
+                    <Text size="small">{item.caption}</Text>
                   </Link>
                 </Menu.Item>
               ))}

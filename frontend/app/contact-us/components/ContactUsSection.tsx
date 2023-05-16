@@ -1,9 +1,13 @@
+// libraries
+import { FC, HTMLAttributes } from "react";
+
+// components
 import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
-import Small from "@/app/components/ui/Small";
-import { cn } from "@/app/lib/utils";
+import { Text } from "@/app/components/ui/Text";
+
+// contents & utils
 import { contacts } from "@/contents/villa/contacts";
-import React, { FC, HTMLAttributes } from "react";
+import { cn } from "@/app/lib/utils";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -13,15 +17,17 @@ const ContactUsSection: FC<Props> = ({ className, ...props }) => {
       {/* hide mobile */}
       <header className=" hidden space-y-4 md:block">
         <div className=" space-y-2">
-          <Small className=" font-medium text-emerald-700">Contact us</Small>
+          <Text size="small" className=" font-medium text-emerald-600">
+            Contact us
+          </Text>
           <Heading className=" text-2xl leading-none">
             Chat to our friendly team
           </Heading>
         </div>
-        <Paragraph className=" text-gray-500">
+        <Text>
           We'd love to hear from you. Please fill out this form or shoot us an
           email.
-        </Paragraph>
+        </Text>
       </header>
 
       <section className="mx-auto grid  max-w-md grid-cols-1 place-content-between gap-x-4 gap-y-6  md:max-w-none md:grid-cols-2">
@@ -34,10 +40,8 @@ const ContactUsSection: FC<Props> = ({ className, ...props }) => {
               <contact.Icon className=" text-emerald-600" size={20} />
             </div>
             <Heading>{contact.name}</Heading>
-            <Paragraph className="text-gray-500">{contact.caption}</Paragraph>
-            <Paragraph className=" text-emerald-700">
-              {contact.detail}
-            </Paragraph>
+            <Text>{contact.caption}</Text>
+            <Text className=" text-emerald-600">{contact.detail}</Text>
           </div>
         ))}
       </section>

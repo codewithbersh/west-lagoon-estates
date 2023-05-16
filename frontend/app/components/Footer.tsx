@@ -1,9 +1,13 @@
-import React from "react";
+// libraries
 import Link from "next/link";
-import Small from "@/app/components/ui/Small";
+import Image from "next/image";
+
+// components
+import { Text } from "./ui/Text";
+
+// images
 import logoMobile from "@/public/images/logo.svg";
 import logoDesktop from "@/public/images/logo-desktop.svg";
-import Image from "next/image";
 
 type LinkType = {
   name: string;
@@ -35,7 +39,7 @@ const links: LinkType[] = [
 
 const Footer = () => {
   return (
-    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 py-8 md:pb-8">
+    <div className="mx-auto flex max-w-5xl flex-col space-y-8 px-4 pb-6 pt-0">
       <hr className=" w-full" />
       <div className="flex flex-col gap-4 space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
         <Image src={logoDesktop} alt="Logo" className="hidden sm:block" />
@@ -49,7 +53,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <Small className=" ">© 2023 West Lagoon Estates</Small>
+        <Text size="small">© 2023 West Lagoon Estates</Text>
       </div>
     </div>
   );

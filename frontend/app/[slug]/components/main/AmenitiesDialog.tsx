@@ -1,7 +1,11 @@
-import React from "react";
+// libraries
 import { Dialog } from "@headlessui/react";
+
+// components
 import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
+import { Text } from "@/app/components/ui/Text";
+
+// icons
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { IconType } from "react-icons";
 
@@ -39,29 +43,26 @@ const AmenetiesDialog = ({ isOpen, setIsOpen, amenities }: Props) => {
               onClick={() => setIsOpen(!isOpen)}
             />
           </div>
-          <div className=" flex flex-col divide-y  divide-solid px-4 pt-[78px]">
-            <Heading className="mb-2 text-[22px]">
+          <div className=" flex flex-col divide-y  divide-solid px-4 pt-[78px] sm:px-8 md:px-12">
+            <Heading size="md" className="mb-6">
               What this villa offers
             </Heading>
             <hr />
             {amenities.map((amenity, index) => (
               <div
-                className="items-start gap-12 space-y-3 py-6 sm:flex sm:space-y-0"
+                className="items-start gap-12 space-y-4 py-12 sm:flex sm:space-y-0"
                 key={index}
               >
                 <div className="space-y-1 sm:w-1/2">
                   <Heading>{amenity.title}</Heading>
-                  <Paragraph>{amenity.description}</Paragraph>
+                  <Text>{amenity.description}</Text>
                 </div>
 
-                <div className=" sm:w-1/2">
+                <div className="space-y-4 sm:w-1/2">
                   {amenity.list.map((item, index) => (
-                    <div
-                      key={index}
-                      className=" flex items-center gap-2 text-gray-700"
-                    >
-                      {<item.Icon />}
-                      <p>{item.description}</p>
+                    <div key={index} className=" flex items-center gap-4">
+                      {<item.Icon className=" text-gray-800" />}
+                      <Text>{item.description}</Text>
                     </div>
                   ))}
                 </div>

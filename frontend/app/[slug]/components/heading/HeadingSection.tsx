@@ -1,25 +1,22 @@
 "use client";
 
+// libraries
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+// components
 import { Button } from "@/app/components/ui/Button";
 import Container from "@/app/components/ui/Container";
 import Heading from "@/app/components/ui/Heading";
-import Small from "@/app/components/ui/Small";
-import { VillaType } from "@/types/villa";
-import Image from "next/image";
-import React, { useState } from "react";
-import { IoLocationOutline } from "react-icons/io5";
-import PhotosCarousel from "./PhotosCarousel";
-
-import { MdOutlineGridView } from "react-icons/md";
-import Link from "next/link";
 import SharePopover from "./SharePopover";
+import PhotosCarousel from "./PhotosCarousel";
+import { Text } from "@/app/components/ui/Text";
 
-/* 
-    TODO:
-        - 'Show all photos' button in md screens above
-        - Modal and Carousel onClick on the image
-        - Hover effect on grid-items: highlight 'Show all photos' button
-*/
+// images & contents
+import { VillaType } from "@/types/villa";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdOutlineGridView } from "react-icons/md";
 
 type Props = {
   villa: VillaType;
@@ -41,7 +38,7 @@ const HeadingSection = ({ villa }: Props) => {
         >
           {photos.length > 0 && (
             <Image
-              className="w-full object-cover hover:brightness-75"
+              className="min-h-[280px] w-full object-cover hover:brightness-75"
               src={photos[0].image}
               alt={photos[0].alt}
             />
@@ -62,32 +59,28 @@ const HeadingSection = ({ villa }: Props) => {
         {/* Title */}
         <div className="px-4 ">
           <div className="  space-y-2 border-b py-4">
-            <Heading className=" text-[26px] leading-none">
-              {villa.cardTitle}
-            </Heading>
-            <Small className=" flex items-center gap-1">
-              <IoLocationOutline />{" "}
+            <Heading size="lg">{villa.cardTitle}</Heading>
+            <div className="flex items-center gap-1">
+              <IoLocationOutline className=" text-gray-800" />
               <Link
                 href="https://www.google.com/maps?ll=25.36565,51.51235&z=15&t=m&hl=en&gl=QA&mapclient=embed&cid=9845095862073321625"
                 target="_blank"
-                className="cursor-pointer underline"
+                className="cursor-pointer text-sm text-gray-500 underline"
               >
                 West Bay Lagoon, Leqtaifiya
               </Link>
-            </Small>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Heading Desktop */}
-      <div className="relative hidden space-y-4 md:block">
+      <div className="relative hidden space-y-2 md:block">
         {/* Title */}
-        <div className="space-y-1">
-          <Heading className=" text-[26px] leading-none">
-            {villa.cardTitle}
-          </Heading>
+        <div className="">
+          <Heading size="lg">{villa.cardTitle}</Heading>
           <div className=" flex justify-between leading-none">
-            <Small className=" flex items-center gap-1">
+            <Text size="small" className=" flex items-center gap-1">
               <IoLocationOutline />{" "}
               <Link
                 href="https://www.google.com/maps?ll=25.36565,51.51235&z=15&t=m&hl=en&gl=QA&mapclient=embed&cid=9845095862073321625"
@@ -96,7 +89,7 @@ const HeadingSection = ({ villa }: Props) => {
               >
                 West Bay Lagoon, Leqtaifiya
               </Link>
-            </Small>
+            </Text>
             <SharePopover />
           </div>
         </div>

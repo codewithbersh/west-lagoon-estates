@@ -8,8 +8,8 @@ const headingVariants = cva("font-medium text-gray-800 ", {
     size: {
       sm: "text-base leading-none",
       default: "text-lg leading-none",
-      md: "text-xl leading-none",
-      lg: "text-2xl leading-none",
+      md: "text-[22px] leading-none",
+      lg: "text-[26px] leading-none",
       xl: "text-3xl leading-none",
     },
   },
