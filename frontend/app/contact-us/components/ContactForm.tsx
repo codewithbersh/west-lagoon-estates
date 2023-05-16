@@ -194,7 +194,7 @@ const ContactForm: FC<Props> = ({ className, ...props }) => {
             <label htmlFor="message">Message</label>
             <TextareaAutosize
               id="message"
-              defaultValue="Set default message"
+              defaultValue="Hi. I'm interested with one of the Villas. What are the next steps?"
               minRows={4}
               {...register("message")}
               className="w-full resize-none rounded-md border px-3 py-2 text-base text-gray-900 outline-none"
